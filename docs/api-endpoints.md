@@ -9,10 +9,10 @@
 
 ### Users
 - `POST /api/users`
-- `PATCH /api/users` 
+- `PATCH /api/users`
 
-### User Tickets
-- `GET /api/users/:id/tickets`
+### User Tickets, Bookmarks, and Events
+- `GET /api/users/:id/`
 
 ### Session
 - `POST /api/session`
