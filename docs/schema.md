@@ -20,8 +20,8 @@
 | time              | time       | not null
 | description       | text       | not null
 | image             | string     | not null
-| ticket_price             | integer    | not null
-| ticket_quantity    | integer    | not null
+| ticket_price      | integer    | not null
+| ticket_quantity   | integer    | not null
 
 ## tickets
 | column name     | data type  | details  
