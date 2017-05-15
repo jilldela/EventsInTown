@@ -19,15 +19,16 @@
 | date              | date       | not null, indexed
 | time              | time       | not null
 | description       | text       | not null
-| image             | string     |
+| image             | string     | not null
+| ticket_price             | integer    | not null
+| ticket_quantity    | integer    | not null
 
 ## tickets
 | column name     | data type  | details  
 |-----------------|------------|------------------------
 | id              | integer    | not null, primary key
-| price           | integer    | not null
-| total_quantity  | integer    | not null
 | event_id        | integer    | not null, foreign key (references events), indexed
+| user_id         | integer    | not null, foreign key (references users), indexed
 
 ## category
 | column name     | data type  | details  
