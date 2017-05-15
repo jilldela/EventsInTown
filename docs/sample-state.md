@@ -2,12 +2,13 @@
 {
   currentUser: {
     id: 1,
-    username: 'jilldela'
+    username: 'jilldela',
+    email: 'jilldela@yahoo.com'
   },
-  forms: {
-    signUpErrors: [],
-    logInErrors: [],
-    createEventErrors: ["Title can't be blank"]
+  formErrors: {
+    signUp: [],
+    logIn: [],
+    createEvent: ["Title can't be blank"]
   },
   // events slice will be multi-purpose; overwritten based on component rendered (i.e. categoriesIndex = events slice)
   events: {
