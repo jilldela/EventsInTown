@@ -60,6 +60,9 @@
     },
     bookmarks: {
       1, 2
+    },
+    tickets: {
+      1
     }
   }
 }

@@ -9,13 +9,7 @@
 
 ### Users
 - `POST /api/users`
-- `PATCH /api/users`
-
-### User Bookmarks
-- `GET /api/users/:id/bookmarks`
-
-### User Events
-- `GET /api/users/:id/events` - events organized by user
+- `PATCH /api/users` 
 
 ### User Tickets
 - `GET /api/users/:id/tickets`
@@ -34,6 +28,3 @@
 ### Categories
 - `GET /api/categories`
 - `GET /api/categories/:id`
-
-### Tickets
-- `GET /api/events/:id/tickets`
