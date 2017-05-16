@@ -7,7 +7,6 @@
       email: 'jilldela@yahoo.com'
     }
   },
-  // TODO: can i just make this whole key 'errors'??
   errors: [],
   // events slice will be multi-purpose; overwritten based on component rendered (i.e. categoriesIndex = events slice)
   events: {

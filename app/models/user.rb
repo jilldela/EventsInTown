@@ -11,8 +11,8 @@ class User < ApplicationRecord
   has_many :bookmarks
   has_many :tickets
 
-  def self.find_by_credentials(email, password)
-    user = User.find_by(email: email)
+  def self.find_by_credentials(username, password)
+    user = User.find_by(username: username)
     user && user.is_password?(password) ? user : nil
   end
 

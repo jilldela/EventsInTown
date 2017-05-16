@@ -1,11 +1,21 @@
-.nav-bar {
+.nav-bar, .session-button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
+  background-color: #077187;
   color: white;
   font-family: 'Oswald', sans-serif;
   font-size: 18px;
+  border: 0;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.session-button {
+  text-transform: uppercase;
+  padding: 0;
 }
 
 .session-links ul {
@@ -15,24 +25,27 @@
   padding: 0;
   color: white;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .session-links ul li {
-  padding: 10px 20px;
-  border-right: 1px solid #EFF2F5;
+  border-right: 1px solid white;
+  padding: 34px 20px;
 }
 
 .session-links ul li:last-child {
   border: 0;
 }
 
-.session-links ul li:hover {
+.session-links ul li:hover,
+.session-button:hover {
   cursor: pointer;
 }
 
-.session-links ul li a:link,
-.session-links ul li a:hover,
-.session-links ul li a:visited, {
+
+header a:link, header a:hover, header a:visited,
+header ul li a:link, header ul li a:hover,
+header ul li a:visited {
   text-decoration: none;
   color: white;
 }
