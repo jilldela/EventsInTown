@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -13,11 +14,23 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillReceiveProps(newProps) {
+
+  }
+
   update(property) {
     return (e) => {
       e.preventDefault();
       this.setState({ [property]: e.currentTarget.value });
     };
+  }
+
+  authRedirect() {
+    if (this.props.formType === 'Log In') {
+      return (
+        <Link>Or, sign up.</Link>
+      );
+    }
   }
 
   handleSubmit(e) {
@@ -28,21 +41,24 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="session-form-conatiner">
-        {this.props.formType}
+      <div className="session-form-container">
         <form onSubmit={this.handleSubmit} className="session-form-box">
-          <label>Username
+          <h3>{this.props.formType}</h3>
+          <br/>
+          <label>
             <input
               type="text"
+              placeholder="Username"
               value={this.username}
               onChange={this.update('username')}
               className="session-input"
               />
           </label>
           <br/>
-          <label>Password
+          <label>
             <input
               type="password"
+              placeholder="Password"
               value={this.password}
               onChange={this.update('password')}
               className="session-input"

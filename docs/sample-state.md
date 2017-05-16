@@ -4,7 +4,6 @@
     currentUser: {
       id: 1,
       username: 'jilldela',
-      email: 'jilldela@yahoo.com'
     }
   },
   errors: [],

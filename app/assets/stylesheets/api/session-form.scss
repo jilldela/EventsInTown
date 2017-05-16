@@ -1,0 +1,15 @@
+.session-form-container {
+  font-family: 'Oswald', sans-serif;
+}
+
+.session-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: auto;
+}
+
+.session-input {
+  padding: 10px;
+}
