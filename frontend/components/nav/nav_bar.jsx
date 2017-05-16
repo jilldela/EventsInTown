@@ -2,17 +2,21 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const sessionLinks = () => (
-  <nav>
-    <Link to="/login">Log In</Link>
-    <Link to="/signup">Sign up!</Link>
+  <nav className="session-links">
+    <ul>
+      <li><Link to="/login">Log In</Link></li>
+      <li><Link to="/signup">Sign up!</Link></li>
+    </ul>
   </nav>
 );
 
 const signedIn = (currentUser, requestLogOut) => (
-  <nav>
-    <Link to="/api/events">Browse Events</Link>
-    <Link to={`/api/users/${currentUser.id}`}>{currentUser.username}</Link>
-    <button className="logout-button">Log Out</button>
+  <nav className="session-links">
+    <ul>
+      <li><Link to="/api/events">Browse Events</Link></li>
+      <li><Link to={`/api/users/${currentUser.id}`}>{currentUser.username}</Link></li>
+      <li><button className="logout-button">Log Out</button></li>
+    </ul>
   </nav>
 );
 

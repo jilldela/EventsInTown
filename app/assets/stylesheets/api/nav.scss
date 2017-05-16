@@ -1,0 +1,38 @@
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+}
+
+.session-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  color: white;
+  text-transform: uppercase;
+}
+
+.session-links ul li {
+  padding: 10px 20px;
+  border-right: 1px solid #EFF2F5;
+}
+
+.session-links ul li:last-child {
+  border: 0;
+}
+
+.session-links ul li:hover {
+  cursor: pointer;
+}
+
+.session-links ul li a:link,
+.session-links ul li a:hover,
+.session-links ul li a:visited, {
+  text-decoration: none;
+  color: white;
+}
