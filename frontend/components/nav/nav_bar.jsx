@@ -1,9 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import SessionModal from '../session/modal';
+
 class NavBar extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      modalOpen: false
+    };
 
     this.handleLogIn = this.handleLogIn.bind(this);
     this.handleLogOut = this.handleLogOut.bind(this);
@@ -18,7 +24,7 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { currentUser } = this.props;
+    const { currentUser, requestSignUp, requestLogIn } = this.props;
 
     if (currentUser) {
       return (
@@ -26,7 +32,9 @@ class NavBar extends React.Component {
           <ul>
             <li><Link to="/api/events">Browse Events</Link></li>
             <li><Link to={`/api/users/${currentUser.id}`}>{currentUser.username}</Link></li>
-            <li><button className="session-button" onClick={this.handleLogOut}>Log Out</button></li>
+            <li><button className="session-button" onClick={this.handleLogOut}>
+              Log Out
+            </button></li>
           </ul>
         </nav>
       );
@@ -36,11 +44,15 @@ class NavBar extends React.Component {
           <ul>
             <li>
               <button className="session-button" onClick={this.handleLogIn}>
-                Demo
+                Guest Log In
               </button>
             </li>
-            <li><Link to="/login">Log In</Link></li>
-            <li><Link to="/signup">Sign up!</Link></li>
+            <li>
+              <SessionModal type="Sign Up"/>
+            </li>
+            <li>
+              <SessionModal type="Log In"/>
+            </li>
           </ul>
         </nav>
       );

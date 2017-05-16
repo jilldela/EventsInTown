@@ -13,17 +13,24 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  update(property) {
+    return (e) => {
+      e.preventDefault();
+      this.setState({ [property]: e.currentTarget.value });
+    };
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = this.state;
-    this.props.processForm({ user });
+    this.props.processForm(user);
   }
 
   render() {
     return (
       <div className="login-form-conatiner">
         <form onSubmit={this.handleSubmit} className="login-form'box">
-          <label>
+          <label>Username
             <input
               type="text"
               value={this.username}
@@ -32,7 +39,7 @@ class SessionForm extends React.Component {
               />
           </label>
           <br/>
-          <label>
+          <label>Password
             <input
               type="password"
               value={this.password}

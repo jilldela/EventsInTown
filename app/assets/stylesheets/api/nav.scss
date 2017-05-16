@@ -15,7 +15,10 @@ h1 {
 
 .session-button {
   text-transform: uppercase;
-  padding: 0;
+  padding: 0!important;
+  border: none;
+  outline: none;
+  outline-offset: 0;
 }
 
 .session-links ul {
