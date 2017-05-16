@@ -3,28 +3,28 @@
 ## HTML API
 
 ### Root
-- `GET /` - loads React web app
+- [ ] `GET /` - loads React web app
 
 ## JSON API
 
 ### Users
-- `POST /api/users`
-- `PATCH /api/users`
+- [ ] `POST /api/users`
+- [ ] `PATCH /api/users/:id`
 
 ### User Tickets, Bookmarks, and Events
-- `GET /api/users/:id/`
+- [ ] `GET /api/users/:id`
 
 ### Session
-- `POST /api/session`
-- `DELETE /api/session`
+- [ ] `POST /api/session`
+- [ ] `DELETE /api/session`
 
 ### Events
-- `GET /api/events`
-- `POST /api/events`
-- `GET /api/events/:id`
-- `PATCH /api/events/:id`
-- `DELETE /api/events/:id`
+- [ ] `GET /api/events`
+- [ ] `POST /api/events`
+- [ ] `GET /api/events/:id`
+- [ ] `PATCH /api/events/:id`
+- [ ] `DELETE /api/events/:id`
 
 ### Categories
-- `GET /api/categories`
-- `GET /api/categories/:id`
+- [ ] `GET /api/categories`
+- [ ] `GET /api/categories/:id`
