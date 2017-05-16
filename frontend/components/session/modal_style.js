@@ -10,12 +10,12 @@ module.exports = {
   },
   content : {
     position        : 'fixed',
-    top             : '100px',
-    left            : '150px',
-    right           : '150px',
-    bottom          : '100px',
+    top             : '15%',
+    left            : '40%',
+    right           : '40%',
+    bottom          : '45%',
     border          : '1px solid #ccc',
     padding         : '20px',
     zIndex          : 11
-  }
+  },
 };

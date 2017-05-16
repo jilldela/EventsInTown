@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-import SessionForm from './session_form';
+import SessionFormContainer from './session_form_container';
 import ModalStyle from './modal_style';
 
 class SessionModal extends React.Component {
@@ -42,7 +42,7 @@ class SessionModal extends React.Component {
             close
           </button>
 
-          <SessionForm />
+          <SessionFormContainer formType={this.props.type}/>
 
         </Modal>
       </div>
