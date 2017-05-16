@@ -10,11 +10,27 @@ class SessionModal extends React.Component {
 
     this.state = {
       openModal: false,
-      signIn: false
+      signIn: false,
+      formType: props.type
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+  }
+
+  changeFormLink() {
+    if (this.state.formType === 'Log In') {
+      return (
+        <p>Or, sign up.</p>
+      );
+    } else {
+      return (
+        <p>Already have an account? Log in.</p>
+      );
+    }
+  }
+
+  changeFormType() {
   }
 
   openModal() {
@@ -38,11 +54,14 @@ class SessionModal extends React.Component {
           style={ModalStyle}
           contentLabel="Session Modal">
 
+          {this.changeFormLink}
+          <button onClick={this.changeFormType}></button>
+
           <button onClick={this.closeModal} className="close-modal-button">
             close
           </button>
 
-          <SessionFormContainer formType={this.props.type}/>
+          <SessionFormContainer formType={this.state.formType}/>
 
         </Modal>
       </div>

@@ -14,10 +14,6 @@ class SessionForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillReceiveProps(newProps) {
-
-  }
-
   update(property) {
     return (e) => {
       e.preventDefault();
@@ -25,10 +21,14 @@ class SessionForm extends React.Component {
     };
   }
 
-  authRedirect() {
-    if (this.props.formType === 'Log In') {
+  errors() {
+    if (this.props.errors) {
       return (
-        <Link>Or, sign up.</Link>
+        <p>{this.props.errors}</p>
+      );
+    } else {
+      return (
+        <p></p>
       );
     }
   }
@@ -45,6 +45,7 @@ class SessionForm extends React.Component {
         <form onSubmit={this.handleSubmit} className="session-form-box">
           <h3>{this.props.formType}</h3>
           <br/>
+          {this.errors}
           <label>
             <input
               type="text"
