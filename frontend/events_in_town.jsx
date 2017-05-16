@@ -12,8 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // TODO: for testing only!
 
-import * as APIUtil from './util/session_api_util';
+import * as Actions from './actions/session_actions';
 
-window.signup = APIUtil.signup;
-window.login = APIUtil.login;
-window.logout = APIUtil.logout;
+window.requestSignUp = Actions.requestSignUp;
+window.requestLogIn = Actions.requestLogIn;
+window.requestLogOut = Actions.requestLogOut;
