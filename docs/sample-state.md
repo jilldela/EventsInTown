@@ -5,6 +5,7 @@
     username: 'jilldela',
     email: 'jilldela@yahoo.com'
   },
+  // TODO: can i just make this whole key 'errors'??
   formErrors: {
     signUp: [],
     logIn: [],
