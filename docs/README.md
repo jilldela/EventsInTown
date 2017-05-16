@@ -4,7 +4,7 @@
 
 [Trello link][trello]
 
-[heroku]: http://www.herokuapp.com
+[heroku]: hhttps://eventsintown.herokuapp.com/
 [trello]: https://trello.com/b/u5HBViFs/eventsintown
 
 ## Minimum Viable Product

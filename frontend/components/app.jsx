@@ -1,8 +1,13 @@
 import React from 'react';
 
+import NavBarContainer from './nav/nav_bar_container';
+
 const App = () => (
   <div>
-    <h1>inside the app!</h1>
+    <header>
+      <h1>Events In Town</h1>
+      <NavBarContainer />
+    </header>
   </div>
 );
 
