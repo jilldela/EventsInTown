@@ -1,10 +1,13 @@
 ```js
 {
-  currentUser: {
-    id: 1,
-    username: 'jilldela',
-    email: 'jilldela@yahoo.com'
-  },
+  session: {
+    currentUser: {
+      id: 1,
+      username: 'jilldela',
+      email: 'jilldela@yahoo.com'
+    },
+    errors: []
+  }
   // TODO: can i just make this whole key 'errors'??
   formErrors: {
     signUp: [],
