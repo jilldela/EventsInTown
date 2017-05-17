@@ -13,6 +13,7 @@
   margin: 0;
   padding: 20px;
   background-color: inherit;
+  font-size: 37px;
 }
 
 .session-links ul {
@@ -27,16 +28,20 @@
 
 .session-links ul li {
   border-right: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.login-links {
   padding: 34px 20px;
 }
-
 .session-links ul li:last-child {
   border: 0;
 }
 
 .session-button {
   text-transform: uppercase;
-  padding: 0!important;
+  padding: 34px 20px!important;
   border: none;
   outline: none;
   outline-offset: 0;

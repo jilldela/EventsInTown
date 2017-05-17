@@ -30,8 +30,8 @@ class NavBar extends React.Component {
       return (
         <nav className="session-links">
           <ul>
-            <li><Link to="/api/events">Browse Events</Link></li>
-            <li><Link to={`/api/users/${currentUser.id}`}>{currentUser.username}</Link></li>
+            <li><Link to="/api/events" className="login-links">Browse Events</Link></li>
+            <li><Link to={`/api/users/${currentUser.id}`} className="login-links">{currentUser.username}</Link></li>
             <li><button className="session-button" onClick={this.handleLogOut}>
               Log Out
             </button></li>

@@ -8,6 +8,7 @@
 
 .form-header {
   font-size: 36px;
+  margin: 20px 0;
 }
 
 .modal-buttons li:first-child {
@@ -50,16 +51,23 @@
 
 .errors {
   color: red;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+.errors li {
+  padding: 5px;
+  margin: 0 20px;
 }
 
 .submit-button {
-  background-color: #06D6A0;
+  background-color: #0eba8c;
   color: white;
   padding: 7.5px 10px!important;
   outline: none;
   outline-offset: 0;
-  width: 83%;
-  border: 1px solid #06D6A0;
+  width: 80%;
+  border: 1px solid #0eba8c;
   border-radius: 5px;
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
