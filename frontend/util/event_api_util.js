@@ -12,25 +12,25 @@ export const fetchSingleEvent = (id) => (
   })
 );
 
-export const createEvent = (event) => (
+export const createEvent = (eventDetail) => (
   $.ajax({
     method: 'POST',
     url: '/api/events',
-    data: { event }
+    data: { eventDetail }
   })
 );
 
-export const updateEvent = (event) => (
+export const updateEvent = (eventDetail) => (
   $.ajax({
     method: 'PATCH',
-    url: `/api/events/${event.id}`,
-    data: { event }
+    url: `/api/events/${eventDetail.id}`,
+    data: { eventDetail }
   })
 );
 
-export const deleteEvent = (id) => (
+export const deleteEvent = (eventDetail) => (
   $.ajax({
     method: 'DELETE',
-    url: `/api/events/${id}`
+    url: `/api/events/${eventDetail.id}`
   })
 );

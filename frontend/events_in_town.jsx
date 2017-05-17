@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as APIUtil from './util/event_api_util';
+import * as Actions from './actions/event_actions';
 
-window.fetchEvents = APIUtil.fetchEvents;
-window.fetchSingleEvent = APIUtil.fetchSingleEvent;
-window.createEvent = APIUtil.createEvent;
-window.updateEvent = APIUtil.updateEvent;
-window.deleteEvent = APIUtil.deleteEvent;
+window.fetchEvents = Actions.fetchEvents;
+window.fetchSingleEvent = Actions.fetchSingleEvent;
+window.createEvent = Actions.createEvent;
+window.updateEvent = Actions.updateEvent;
+window.deleteEvent = Actions.deleteEvent;
