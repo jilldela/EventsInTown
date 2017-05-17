@@ -7,8 +7,8 @@ import SessionFormContainer from './session/session_form_container';
 const App = () => (
   <div>
     <header className="nav-bar">
-      <h1 className="nav-logo">
-        <Link to="/">
+      <h1>
+        <Link to="/" className="nav-logo">
           EventsInTown
         </Link>
       </h1>

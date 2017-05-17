@@ -43,7 +43,7 @@ class SessionForm extends React.Component {
 
   render() {
     return (
-      <div className="session-form-container">
+      <div>
         <form className="session-form-box">
           <h2 className="form-header">{this.props.formType}</h2>
           {this.renderErrors()}

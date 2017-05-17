@@ -22,11 +22,11 @@ class SessionModal extends React.Component {
   changeFormLink() {
     if (this.state.formType === 'Log In') {
       return (
-        <p>Don't have an account? Sign up.</p>
+        <p className="switch-form">Don't have an account? Sign up.</p>
       );
     } else {
       return (
-        <p>Already have an account? Log in.</p>
+        <p className="switch-form">Already have an account? Log in.</p>
       );
     }
   }
@@ -58,16 +58,23 @@ class SessionModal extends React.Component {
           isOpen={this.state.openModal}
           onRequestClose={this.closeModal}
           style={ModalStyle}
-          contentLabel="Session Modal">
+          contentLabel="Session Modal"
+          className="session-form-container">
 
           <ul className="modal-buttons">
             <li>
-              <button onClick={this.closeModal} className="close-modal-button">
+              <button
+                onClick={this.closeModal}
+                className="close-modal-button">
                 X
               </button>
             </li>
             <li>
-              <button onClick={this.changeFormType}>{this.changeFormLink()}</button>
+              <button
+                onClick={this.changeFormType}
+                className="switch-form-button">
+                {this.changeFormLink()}
+              </button>
             </li>
           </ul>
 
