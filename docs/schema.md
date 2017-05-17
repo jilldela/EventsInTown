@@ -18,7 +18,7 @@
 | location          | string     | not null
 | date              | date       | not null, indexed
 | time              | time       | not null
-| description       | text       | not null
+| description       | text       | 
 | image             | string     | not null
 | ticket_price      | integer    | not null
 | ticket_quantity   | integer    | not null
