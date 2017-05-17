@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-import SessionFormContainer from './session_form_container';
+import SessionForm from './session_form';
 import ModalStyle from './modal_style';
 
 class SessionModal extends React.Component {
@@ -33,9 +33,11 @@ class SessionModal extends React.Component {
 
   changeFormType() {
     if (this.state.formType === 'Log In') {
-      return this.setState({ formType: 'Sign Up', errors: [] });
+      this.props.clearErrors();
+      return this.setState({ formType: 'Sign Up' });
     } else {
-      return this.setState({ formType: 'Log In', errors: [] });
+      this.props.clearErrors();
+      return this.setState({ formType: 'Log In' });
     }
   }
 
@@ -79,7 +81,10 @@ class SessionModal extends React.Component {
           </ul>
 
 
-          <SessionFormContainer formType={this.state.formType} />
+          <SessionForm
+            formType={this.state.formType}
+            processForm={this.props.processForm}
+            errors={this.props.errors}/>
 
         </Modal>
       </div>

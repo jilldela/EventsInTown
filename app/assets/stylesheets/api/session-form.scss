@@ -8,6 +8,12 @@
   border: 0;
 }
 
+.session-form-container:focus,
+.switch-form-button:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
 .switch-form {
   font-family: 'Roboto', sans-serif;
   font-size: 13px;

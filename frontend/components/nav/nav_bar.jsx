@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import SessionModal from '../session/modal';
+import SessionFormContainer from '../session/session_form_container';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -48,10 +48,10 @@ class NavBar extends React.Component {
               </button>
             </li>
             <li>
-              <SessionModal type="Sign Up" requestLogIn={requestLogIn}/>
+              <SessionFormContainer type="Sign Up"/>
             </li>
             <li>
-              <SessionModal type="Log In" requestLogIn={requestLogIn}/>
+              <SessionFormContainer type="Log In"/>
             </li>
           </ul>
         </nav>

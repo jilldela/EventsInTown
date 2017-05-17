@@ -8,6 +8,11 @@
   font-size: 18px;
   border: 0;
 }
+.nav-bar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
 
 .nav-logo {
   margin: 0;
