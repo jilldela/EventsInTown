@@ -1,3 +1,25 @@
+.modal-buttons {
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-header {
+  font-size: 36px;
+}
+
+.modal-buttons li:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.modal-buttons li:last-child {
+  display: flex;
+  justify-content: center;
+}
+
 .session-form-container {
   font-family: 'Oswald', sans-serif;
 }
@@ -7,9 +29,47 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: auto;
+  list-style-type: none;
+  width: 100%;
 }
 
 .session-input {
   padding: 10px;
+  width: 75%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.5s;
+}
+
+.session-input:focus {
+  outline-color: #077187;
+  background-color: #F4F7F5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.errors {
+  color: red;
+}
+
+.submit-button {
+  background-color: #06D6A0;
+  color: white;
+  padding: 7.5px 10px!important;
+  outline: none;
+  outline-offset: 0;
+  width: 83%;
+  border: 1px solid #06D6A0;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #295E42;
+  border: 1px solid #295E42;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
 }

@@ -16,12 +16,13 @@ class SessionModal extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.changeFormType = this.changeFormType.bind(this);
   }
 
   changeFormLink() {
     if (this.state.formType === 'Log In') {
       return (
-        <p>Or, sign up.</p>
+        <p>Don't have an account? Sign up.</p>
       );
     } else {
       return (
@@ -31,6 +32,11 @@ class SessionModal extends React.Component {
   }
 
   changeFormType() {
+    if (this.state.formType === 'Log In') {
+      return this.setState({ formType: 'Sign Up', errors: [] });
+    } else {
+      return this.setState({ formType: 'Log In', errors: [] });
+    }
   }
 
   openModal() {
@@ -54,14 +60,19 @@ class SessionModal extends React.Component {
           style={ModalStyle}
           contentLabel="Session Modal">
 
-          {this.changeFormLink}
-          <button onClick={this.changeFormType}></button>
+          <ul className="modal-buttons">
+            <li>
+              <button onClick={this.closeModal} className="close-modal-button">
+                X
+              </button>
+            </li>
+            <li>
+              <button onClick={this.changeFormType}>{this.changeFormLink()}</button>
+            </li>
+          </ul>
 
-          <button onClick={this.closeModal} className="close-modal-button">
-            close
-          </button>
 
-          <SessionFormContainer formType={this.state.formType}/>
+          <SessionFormContainer formType={this.state.formType} />
 
         </Modal>
       </div>

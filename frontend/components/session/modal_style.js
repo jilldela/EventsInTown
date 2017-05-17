@@ -11,11 +11,12 @@ module.exports = {
   content : {
     position        : 'fixed',
     top             : '15%',
-    left            : '35%',
-    right           : '35%',
-    bottom          : '45%',
+    left            : '30%',
+    right           : '30%',
+    bottom          : '30%',
     border          : '1px solid #ccc',
-    padding         : '20px',
+    borderRadius    : '5px',
+    padding         : '10px',
     zIndex          : 11
   },
 };

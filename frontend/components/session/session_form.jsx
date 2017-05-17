@@ -8,9 +8,11 @@ class SessionForm extends React.Component {
 
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      errors: props.errors
     };
 
+    this.renderErrors = this.renderErrors.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -21,17 +23,17 @@ class SessionForm extends React.Component {
     };
   }
 
-  errors() {
-    if (this.props.errors) {
-      return (
-        <p>{this.props.errors}</p>
-      );
-    } else {
-      return (
-        <p></p>
+  renderErrors() {
+      return(
+        <ul className="errors">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
       );
     }
-  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -42,11 +44,9 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="session-form-container">
-        <form onSubmit={this.handleSubmit} className="session-form-box">
-          <h3>{this.props.formType}</h3>
-          <br/>
-          {this.errors}
-          <label>
+        <form className="session-form-box">
+          <h2 className="form-header">{this.props.formType}</h2>
+          {this.renderErrors()}
             <input
               type="text"
               placeholder="Username"
@@ -54,9 +54,7 @@ class SessionForm extends React.Component {
               onChange={this.update('username')}
               className="session-input"
               />
-          </label>
           <br/>
-          <label>
             <input
               type="password"
               placeholder="Password"
@@ -64,9 +62,12 @@ class SessionForm extends React.Component {
               onChange={this.update('password')}
               className="session-input"
               />
-          </label>
           <br/>
-          <input type="submit" value="Submit" />
+            <input
+              type="submit"
+              value="Submit"
+              className="submit-button"
+              onClick={this.handleSubmit}/><br/>
         </form>
       </div>
     );

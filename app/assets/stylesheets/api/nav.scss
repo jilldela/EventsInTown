@@ -9,16 +9,10 @@
   border: 0;
 }
 
-h1 {
-  margin: 20px;
-}
-
-.session-button {
-  text-transform: uppercase;
-  padding: 0!important;
-  border: none;
-  outline: none;
-  outline-offset: 0;
+.nav-logo {
+  margin: 0;
+  padding: 20px;
+  background-color: inherit;
 }
 
 .session-links ul {
@@ -40,15 +34,26 @@ h1 {
   border: 0;
 }
 
-.session-links ul li:hover,
+.session-button {
+  text-transform: uppercase;
+  padding: 0!important;
+  border: none;
+  outline: none;
+  outline-offset: 0;
+  background-color: inherit;
+}
+
+.nav-logo:hover, .session-links ul li:hover,
 .session-button:hover {
   cursor: pointer;
+  background-color: #12383f;
 }
 
 
 header a:link, header a:hover, header a:visited,
 header ul li a:link, header ul li a:hover,
 header ul li a:visited {
+  cursor: pointer;
   text-decoration: none;
   color: white;
 }

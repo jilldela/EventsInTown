@@ -48,10 +48,10 @@ class NavBar extends React.Component {
               </button>
             </li>
             <li>
-              <SessionModal type="Sign Up"/>
+              <SessionModal type="Sign Up" requestLogIn={requestLogIn}/>
             </li>
             <li>
-              <SessionModal type="Log In"/>
+              <SessionModal type="Log In" requestLogIn={requestLogIn}/>
             </li>
           </ul>
         </nav>

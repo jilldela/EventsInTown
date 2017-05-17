@@ -7,9 +7,11 @@ import SessionFormContainer from './session/session_form_container';
 const App = () => (
   <div>
     <header className="nav-bar">
-      <Link to="/">
-        <h1>EventsInTown</h1>
-      </Link>
+      <h1 className="nav-logo">
+        <Link to="/">
+          EventsInTown
+        </Link>
+      </h1>
       <NavBarContainer />
     </header>
 
