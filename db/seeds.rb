@@ -51,7 +51,19 @@ Event.create(
   date: Date.new(2017, 8,14),
   time: Time.new(2017,8,14,14,0,0),
   description: 'Paint the town!',
-  image: 'https://images.unsplash.com/photo-1461344577544-4e5dc9487184?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp;bg=', 
+  image: 'https://images.unsplash.com/photo-1461344577544-4e5dc9487184?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1199&amp;h=799&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp;bg=',
   ticket_price: 0,
   ticket_quantity: 15
 )
+
+Event.create(
+    organizer_id: 4,
+    title: 'Photography Walk',
+    location: 'San Francisco, CA',
+    date: Date.new(2017,9,22),
+    time: Time.new(2017,9,22,19,0,0),
+    description: 'Join us on a two-hour, light stroll next to San Franciscos beloved, Golden Gate Bridge.',
+    image: 'https://images.unsplash.com/photo-1450149632596-3ef25a62011a?dpr=1&amp;auto=compress,format&amp;fit=crop&amp;w=376&amp;h=263&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp',
+    ticket_price: 0,
+    ticket_quantity: 10
+  )

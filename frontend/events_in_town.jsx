@@ -17,6 +17,20 @@ document.addEventListener("DOMContentLoaded", () => {
     store = configureStore();
   }
 
+  // TODO: for testing only!
+  window.store = store;
+
   Modal.setAppElement(document.body);
   ReactDOM.render(<Root store={ store } />, root);
 });
+
+
+
+// TODO: for testing only!
+import * as APIUtil from './util/event_api_util';
+
+window.fetchEvents = APIUtil.fetchEvents;
+window.fetchSingleEvent = APIUtil.fetchSingleEvent;
+window.createEvent = APIUtil.createEvent;
+window.updateEvent = APIUtil.updateEvent;
+window.deleteEvent = APIUtil.deleteEvent;

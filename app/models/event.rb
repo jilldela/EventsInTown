@@ -7,8 +7,6 @@ class Event < ApplicationRecord
     foreign_key: :organizer_id,
     class_name: :User
 
-  has_many :tickets
   has_many :event_categories
-  has_many :bookmarks
 
 end
