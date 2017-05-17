@@ -14,7 +14,6 @@ const App = () => (
       </h1>
       <NavBarContainer />
     </header>
-
   </div>
 );
 
