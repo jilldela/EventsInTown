@@ -38,6 +38,7 @@
   padding: 0;
   display: flex;
   flex-direction: column;
+  background-color: inherit;
 }
 
 .form-header {
@@ -62,6 +63,7 @@
   align-items: center;
   list-style-type: none;
   width: 100%;
+  background-color: inherit;
 }
 
 .session-input {

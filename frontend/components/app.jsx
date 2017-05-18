@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 import NavBarContainer from './nav/nav_bar_container';
 import SessionFormContainer from './session/session_form_container';
+import EventIndexContainer from './events/event_index_container';
 
 const App = () => (
   <div>
@@ -19,6 +20,7 @@ const App = () => (
         src="https://images.pexels.com/photos/2143/lights-party-dancing-music.jpg?w=1260&h=750&auto=compress&cs=tinysrgb"
         alt="event-image"/>
     </div>
+    <EventIndexContainer />
   </div>
 );
 
