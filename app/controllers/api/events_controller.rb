@@ -1,4 +1,5 @@
 class Api::EventsController < ApplicationController
+
   def index
     @events = Event.all
   end
@@ -18,18 +19,28 @@ class Api::EventsController < ApplicationController
     end
   end
 
-  def destroy
-    event = Event.find(params[:id])
-    event.destroy
-  end
-
   def update
     @event = Event.find(params[:id])
 
-    if @event.update(event_params)
-      render "api/events/show"
+    if @event.organizer_id == current_user.id
+      if @event.update(event_params)
+        render "api/events/show"
+      else
+        render json: @event.errors.full_messages, status: 422 #unprocessable entity
+      end
     else
-      render json: @event.errors.full_messages, status: 422 #unprocessable entity
+      render json: ["Oops, looks like this event does not belong to you."], status: 422
+    end
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+
+    if @event.organizer_id == current_user.id
+      @event.destroy
+      render "/"
+    else
+      render json: ["Oops, this event does not belong to you."], status: 422
     end
   end
 
