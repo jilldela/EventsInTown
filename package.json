@@ -14,7 +14,13 @@
     "type": "git",
     "url": "git+https://github.com/jilldela/EventsInTown.git"
   },
-  "keywords": [],
+  "keywords": [
+    "react",
+    "carousel",
+    "slider",
+    "flickity",
+    "react-component"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
@@ -26,9 +32,11 @@
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "flickity": "^2.0.6",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-flickity-component": "^0.1.0",
     "react-modal": "^1.7.7",
     "react-redux": "^5.0.4",
     "react-router": "^4.1.1",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class EventIndexItem extends React.Component {
   constructor(props) {
@@ -7,10 +7,19 @@ class EventIndexItem extends React.Component {
   }
 
   render() {
-    const {eventDetail} = this.props;
+    const { eventDetail } = this.props;
 
     return (
-      <li>{eventDetail.title}</li>
+
+        <div className="carousel-cell" >
+          <Link to={`/events/${eventDetail.id}`}>
+            <img
+              className="cell-image"
+              src={`${eventDetail.image}`}
+              alt={`${eventDetail.title}`}/>            
+          </Link>
+        </div>
+
     );
   }
 }

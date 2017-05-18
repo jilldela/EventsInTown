@@ -3,7 +3,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: column;
-  background-color: white;
+  background-color: inherit;
   opacity: 100%;
   border: 0;
 }
@@ -63,7 +63,7 @@
   align-items: center;
   list-style-type: none;
   width: 100%;
-  background-color: inherit;
+  background: transparent;
 }
 
 .session-input {

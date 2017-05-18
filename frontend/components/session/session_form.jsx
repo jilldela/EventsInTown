@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
     return (
       <div>
         <form className="session-form-box">
-          <h2 className="form-header">{this.props.formType}</h2>
+          <h2 className="form-header">{this.props.type}</h2>
           {this.renderErrors()}
             <input
               type="text"

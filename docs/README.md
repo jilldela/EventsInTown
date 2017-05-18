@@ -38,7 +38,7 @@ EventsInTown is a web application inspired by Eventbrite built using Ruby on Rai
 
 **Objective:** Functioning rails project with front-end Authentication.
 
-### Phase 2: Events model, API, and components ( 2 days )
+### Phase 2: Events model, API, and components ( 3 days )
 
 **Objective:** Events can be created, viewed, edited, and destroyed through the API.
 
@@ -46,7 +46,7 @@ EventsInTown is a web application inspired by Eventbrite built using Ruby on Rai
 
 **Objective:** Events belong to categories that can be viewed and searched by.
 
-### Phase 4: Registration / Tickets ( 2 days )
+### Phase 4: Registration / Tickets ( 1 days )
 
 **Objective:** Events have tickets, and users can register for events through purchase of tickets.
 

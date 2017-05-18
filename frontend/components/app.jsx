@@ -4,6 +4,7 @@ import { Link, Route } from 'react-router-dom';
 import NavBarContainer from './nav/nav_bar_container';
 import SessionFormContainer from './session/session_form_container';
 import EventIndexContainer from './events/event_index_container';
+import EventDetailContainer from './events/event_detail_container';
 
 const App = () => (
   <div>
@@ -21,6 +22,8 @@ const App = () => (
         alt="event-image"/>
     </div>
     <EventIndexContainer />
+
+    <Route exact path="/events/:eventId" component={EventDetailContainer} />
   </div>
 );
 

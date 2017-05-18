@@ -1,5 +1,6 @@
 import { connect } from 'react-redux';
 
+// import Carousel from './flickity';
 import EventIndex from './event_index';
 import { fetchEvents } from '../../actions/event_actions';
 import { selectAllEvents, deleteEvent } from '../../reducers/selectors';

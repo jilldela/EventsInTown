@@ -11,16 +11,16 @@ class SessionModal extends React.Component {
     this.state = {
       openModal: false,
       signIn: false,
-      formType: props.type
+      type: props.type
     };
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.changeFormType = this.changeFormType.bind(this);
+    this.changetype = this.changetype.bind(this);
   }
 
   changeFormLink() {
-    if (this.state.formType === 'Log In') {
+    if (this.state.type === 'Log In') {
       return (
         <p className="switch-form">Don't have an account? Sign up.</p>
       );
@@ -31,13 +31,13 @@ class SessionModal extends React.Component {
     }
   }
 
-  changeFormType() {
-    if (this.state.formType === 'Log In') {
+  changetype() {
+    if (this.state.type === 'Log In') {
       this.props.clearErrors();
-      return this.setState({ formType: 'Sign Up' });
+      return this.setState({ type: 'Sign Up' });
     } else {
       this.props.clearErrors();
-      return this.setState({ formType: 'Log In' });
+      return this.setState({ type: 'Log In' });
     }
   }
 
@@ -73,7 +73,7 @@ class SessionModal extends React.Component {
             </li>
             <li>
               <button
-                onClick={this.changeFormType}
+                onClick={this.changetype}
                 className="switch-form-button">
                 {this.changeFormLink()}
               </button>
@@ -82,7 +82,7 @@ class SessionModal extends React.Component {
 
 
           <SessionForm
-            formType={this.state.formType}
+            type={this.state.type}
             processForm={this.props.processForm}
             errors={this.props.errors}/>
 
