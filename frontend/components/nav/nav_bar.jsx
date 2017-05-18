@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import SessionFormContainer from '../session/session_form_container';
+import EventFormContainer from '../events/event_form_container';
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class NavBar extends React.Component {
         <nav className="session-links">
           <ul>
             <li><Link to="/events" className="login-links">Browse Events</Link></li>
+            <li><EventFormContainer /></li>
             <li><Link to={`/users/${currentUser.id}`} className="login-links">{currentUser.username}</Link></li>
             <li><button className="session-button" onClick={this.handleLogOut}>
               Log Out
