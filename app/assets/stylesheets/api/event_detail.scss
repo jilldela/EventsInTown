@@ -1,0 +1,86 @@
+.event-detail-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 94px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.event-detail-header {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-event-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-align: right;
+  margin-left: 15px;
+}
+
+.event-detail-header h1 {
+  font-size: 64px;
+}
+
+.bookmark {
+  height: 30px;
+}
+
+.bookmark:hover {
+  cursor: pointer;
+  height: 35px;
+}
+
+.ticket-button {
+  background-color: #0eba8c;
+  color: white;
+  padding: 7.5px 10px!important;
+  outline: none;
+  outline-offset: 0;
+  width: 300px;
+  margin: 5px;
+  border: 1px solid #0eba8c;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.ticket-button:hover {
+  background-color: #295E42;
+  border: 1px solid #295E42;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ticket-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding: 0 50px;
+}
+
+
+.main-detail-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.event-detail {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.event-image {
+  width: 50%;
+  height: 50%;
+  display: flex;
+}
