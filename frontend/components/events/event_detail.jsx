@@ -12,6 +12,8 @@ class EventDetail extends React.Component {
   render() {
     const { eventDetail } = this.props;
 
+    window.scrollTo(0,0);
+
     return (
       <div className="event-detail-container">
         <header className="event-detail-header">
@@ -31,10 +33,8 @@ class EventDetail extends React.Component {
         </div>
         <div className="main-detail-container">
           <div className="event-description">
-            <label>
-              <h1>Description</h1>
-              <p>{eventDetail.description}</p>
-            </label>
+            <h1>Description</h1>
+            <p>{eventDetail.description}</p>
           </div>
           <aside>
             <ul className="event-detail">

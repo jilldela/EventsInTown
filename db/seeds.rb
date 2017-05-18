@@ -6,9 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
 guest = User.create(username: 'guest', password: 'password')
+jill = User.create(username: 'jill', password: 'password')
+john = User.create(username: 'john', password: 'password')
+jack = User.create(username: 'jack', password: 'password')
+eric = User.create(username: 'eric', password: 'password')
+alaina = User.create(username: 'alaina', password: 'password')
+rina = User.create(username: 'rina', password: 'password')
+cheryl = User.create(username: 'cheryl', password: 'password')
+glenn = User.create(username: 'glenn', password: 'password')
 
-Event.create(
+Event.destroy_all
+e1 = Event.create(
   organizer_id: 2,
   title: 'Tahiti Fete',
   location: 'San Jose, CA',
@@ -20,7 +30,7 @@ Event.create(
   ticket_quantity: 1000
 )
 
-Event.create(
+e2 = Event.create(
   organizer_id: 2,
   title: 'Island Reggae',
   location: 'Santa Clara, CA',
@@ -32,7 +42,7 @@ Event.create(
   ticket_quantity: 1000
 )
 
-Event.create(
+e3 = Event.create(
   organizer_id: 5,
   title: 'MTD Boot Camp',
   location: 'San Francisco, CA',
@@ -44,7 +54,7 @@ Event.create(
   ticket_quantity: 30
 )
 
-Event.create(
+e4 = Event.create(
   organizer_id: 3,
   title: 'Paint Brushes Going Up!',
   location: 'San Francisco, CA',
@@ -56,7 +66,7 @@ Event.create(
   ticket_quantity: 15
 )
 
-Event.create(
+e5 = Event.create(
     organizer_id: 4,
     title: 'Photography Walk',
     location: 'San Francisco, CA',
@@ -66,4 +76,40 @@ Event.create(
     image: 'https://images.unsplash.com/photo-1450149632596-3ef25a62011a?dpr=1&amp;auto=compress,format&amp;fit=crop&amp;w=376&amp;h=263&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp',
     ticket_price: 0,
     ticket_quantity: 10
+  )
+
+e6 = Event.create(
+    organizer_id: 4,
+    title: 'Yoga in the City',
+    location: 'San Francisco, CA',
+    date: Date.new(2017,10,25),
+    time: Time.new(2017,10,25,19,0,0),
+    description: 'Stretch. Breathe. Elevate Your Senses. Join us for a deeply nourishing, all levels, floor-based, yin/restorative yoga class with hands-on adjustments and tea afterwards.',
+    image: 'https://images.unsplash.com/photo-1485727749690-d091e8284ef3?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1199&amp;h=1199&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp',
+    ticket_price: 10,
+    ticket_quantity: 30
+  )
+
+e7 = Event.create(
+    organizer_id: 2,
+    title: 'Movie Night',
+    location: 'San Francisco, CA',
+    date: Date.new(2017,11,25),
+    time: Time.new(2017,11,25,19,0,0),
+    description: 'HIDDEN FIGURES! Hidden Figures tells the story of three African American female mathematicians and contributions to NASA and the space program. Join us for film, refreshments, and discussion as we present this movie on an HD projector to make the experience as cinematic as possible. We ask that only ages 13+ attend this screening.',
+    image: 'https://images.moviepilot.com/image/upload/c_fill,h_630,q_auto:best,w_1200/gfbuqwj7m8g2gfkbgiif.jpg',
+    ticket_price: 10,
+    ticket_quantity: 30
+  )
+
+e8 = Event.create(
+    organizer_id: 1,
+    title: 'Surf City',
+    location: 'Pacifica, CA',
+    date: Date.new(2017,8,25),
+    time: Time.new(2017,8,25,9,0,0),
+    description: 'Surf Theory Lesson and a 2 Hour Water Lesson. There will be a break in the day for lunch (not provided) but there is a lovely local surf cafe on site, where you can enjoy a post yoga lunch and fuel up before an afternoon of surfing.',
+    image: 'https://images.unsplash.com/photo-1415931633537-351070d20b81?dpr=1&amp;auto=format&amp;fit=crop&amp;w=1199&amp;h=796&amp;q=80&amp;cs=tinysrgb&amp;crop=&amp;',
+    ticket_price: 10,
+    ticket_quantity: 30
   )

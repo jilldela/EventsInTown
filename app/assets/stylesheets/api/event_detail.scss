@@ -4,11 +4,13 @@
   position: absolute;
   top: 94px;
   font-family: 'Raleway', sans-serif;
+  width: 100%;
 }
 
 .event-detail-header {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .hero-event-detail {
@@ -17,7 +19,7 @@
   justify-content: space-between;
   align-items: flex-end;
   text-align: right;
-  margin-left: 15px;
+  margin: 25px;
 }
 
 .event-detail-header h1 {
@@ -62,7 +64,7 @@
   align-items: center;
   border-top: 1px solid black;
   border-bottom: 1px solid black;
-  padding: 0 50px;
+  padding: 0 100px;
 }
 
 
@@ -83,4 +85,9 @@
   width: 50%;
   height: 50%;
   display: flex;
+}
+
+.event-description h1 {
+  font-size: 24px;
+  font-weight: bold;
 }
