@@ -46,7 +46,11 @@ class EventForm extends React.Component {
     e.preventDefault();
 
     this.props.createEvent(this.state)
-      .then(data => this.props.history.push(`/events/${data.id}`));
+      .then(data => {
+        this.props.history.push(`/events/${data.id}`);
+        this.props.closeModal();
+      }
+      );
   }
 
   renderErrors() {

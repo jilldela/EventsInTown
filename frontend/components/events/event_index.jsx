@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import Carousel from 'nuka-carousel';
 
 import EventIndexItem from './event_index_item';
 
@@ -18,7 +19,7 @@ class EventIndex extends React.Component {
     return (
       <div className="event-index-container">
         <h1 className="event-index-header">EventsIndex</h1>
-        <div className="event-index">
+        <Carousel className="event-index" wrapAround={true}>
           {events.map(eventDetail =>
             <EventIndexItem
               deleteEvent={deleteEvent}
@@ -26,7 +27,7 @@ class EventIndex extends React.Component {
               key={`event-${eventDetail.id}`}
               />
           )}
-        </div>
+        </Carousel>
       </div>
     );
 

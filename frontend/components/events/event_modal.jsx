@@ -42,7 +42,8 @@ class EventModal extends React.Component {
           <EventForm
             createEvent={createEvent}
             session={session}
-            errors={errors}/>
+            errors={errors}
+            closeModal={this.closeModal}/>
 
         </Modal>
 
