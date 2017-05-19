@@ -66,8 +66,8 @@ export const updateEvent = (eventDetail) => (dispatch) => (
   )
 );
 
-export const deleteEvent = (eventDetail) => (dispatch) => (
-  APIUtil.deleteEvent(eventDetail)
+export const deleteEvent = (id) => (dispatch) => (
+  APIUtil.deleteEvent(id)
     .then((respEventDetail) => {
       dispatch(removeEvent(respEventDetail));
       dispatch(clearErrors());

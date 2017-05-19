@@ -16,6 +16,7 @@ const defaultEvent = {
 
 const eventDetailReducer = (state = defaultEvent, action) => {
   Object.freeze(state);
+  let newState;
 
   switch (action.type) {
     case RECEIVE_SINGLE_EVENT:

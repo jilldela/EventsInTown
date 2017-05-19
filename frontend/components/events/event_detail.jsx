@@ -16,13 +16,16 @@ class EventDetail extends React.Component {
   }
 
   editButton() {
-    const { eventDetail, session, updateEvent, errors } = this.props;
+    const { eventDetail, session, updateEvent, errors, deleteEvent, history } = this.props;
 
-    if (eventDetail.organizer && (session.currentUser.id === eventDetail.organizer_id)) {
+    if (eventDetail.organizer && session.currentUser &&
+      (session.currentUser.id === eventDetail.organizer_id)) {
       return (
         <EditModal
+          history={history}
           updateEvent={updateEvent}
           eventDetail={eventDetail}
+          deleteEvent={deleteEvent}
           session={session}
           errors={errors}/>
       );

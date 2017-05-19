@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as Action from './actions/user_actions';
+import * as Action from './actions/event_actions';
 
-window.fetchUser = Action.fetchUser;
+window.deleteEvent = Action.deleteEvent;

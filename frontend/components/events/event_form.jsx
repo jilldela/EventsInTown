@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link, withRouter } from 'react-router-dom';
 import merge from 'lodash/merge';
 
 class EventForm extends React.Component {
@@ -18,6 +17,8 @@ class EventForm extends React.Component {
       ticket_quantity: (props.eventDetail.ticket_quantity || 0)
     };
 
+    this.deleteButton = this.deleteButton.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
     this.handleCreate = this.handleCreate.bind(this);
     this.handleEdit = this.handleEdit.bind(this);
     this.upload = this.upload.bind(this);
@@ -72,6 +73,20 @@ class EventForm extends React.Component {
         this.props.closeModal();
       }
     );
+  }
+
+  deleteButton() {
+    if (this.props.type === "Edit Event") {
+      return (
+        <button className="delete-event-button" onClick={this.handleDelete}>Delete</button>
+      );
+    }
+  }
+
+  handleDelete(e) {
+    e.preventDefault();
+    this.props.deleteEvent(this.props.eventDetail.id);
+    this.props.history.push('/');
   }
 
   renderErrors() {
@@ -151,6 +166,8 @@ class EventForm extends React.Component {
               className="image-button">Upload Image</button>
           </label>
 
+          {this.deleteButton()}
+
           <button className="submit-button">{this.props.type}</button>
 
         </form>
@@ -159,4 +176,4 @@ class EventForm extends React.Component {
   }
 }
 
-export default withRouter(EventForm);
+export default EventForm;

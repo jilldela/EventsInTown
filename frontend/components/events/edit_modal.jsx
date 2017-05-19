@@ -25,7 +25,14 @@ class EditModal extends React.Component {
   }
 
   render() {
-    const {updateEvent, session, errors, eventDetail} = this.props;
+    const {
+      updateEvent,
+      session,
+      errors,
+      eventDetail,
+      deleteEvent,
+      history
+    } = this.props;
 
     return (
       <div>
@@ -43,9 +50,11 @@ class EditModal extends React.Component {
             className="event-form-container">
 
             <EventForm
+              history={history}
               type="Edit Event"
-              eventDetail={eventDetail}
               updateEvent={updateEvent}
+              eventDetail={eventDetail}
+              deleteEvent={deleteEvent}
               session={session}
               errors={errors}
               closeModal={this.closeModal}/>

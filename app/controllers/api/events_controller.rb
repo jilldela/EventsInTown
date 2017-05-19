@@ -35,11 +35,11 @@ class Api::EventsController < ApplicationController
   def destroy
     @event = Event.find(params[:id])
 
-    if @event.organizer_id == current_user.id
+    if @event
       @event.destroy
-      render "/"
+      render "api/events/show"
     else
-      render json: ["Oops, this event does not belong to you."], status: 422
+      render json: @event.errors.full_messages, status: 422
     end
   end
 
