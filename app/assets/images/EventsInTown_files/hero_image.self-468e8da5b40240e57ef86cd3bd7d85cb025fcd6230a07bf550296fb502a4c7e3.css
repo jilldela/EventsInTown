@@ -1,0 +1,8 @@
+/* line 5, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/hero_image.scss */
+.hero-image-container img {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  min-width: 500px;
+  position: relative;
+}

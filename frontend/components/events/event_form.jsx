@@ -74,40 +74,40 @@ class EventForm extends React.Component {
           <h2 className="form-header">Create An Event</h2>
           {this.renderErrors()}
 
-          <label>Event Title*
+          <label className="event-label">
             <input
               type="text"
-              placeholder="Title"
+              placeholder="Event Title *"
               value={title}
               onChange={this.update('title')}
               className="event-input"/>
           </label>
 
-          <label>Location*
+          <label className="event-label">
             <input
               type="text"
-              placeholder="Location"
+              placeholder="Location *"
               value={location}
               onChange={this.update('location')}
               className="event-input"/>
           </label>
 
-          <label>
+          <label className="event-label date">Date*
             <input
               type="date"
               value={date}
               onChange={this.update('date')}/>
           </label>
 
-          <label>Description*
+          <label className="event-label">
             <textarea
               value={description}
               onChange={this.update('description')}
-              placeholder="Description"
-              className="event-description"></textarea>
+              placeholder="Description *"
+              className="event-input event-description"></textarea>
           </label>
 
-          <label>Ticket Price*
+          <label className="event-label ticket">Ticket Price*
             <input
               type="text"
               value={ticket_price}
@@ -115,7 +115,7 @@ class EventForm extends React.Component {
               className="event-input"/>
           </label>
 
-          <label>Ticket Quantity*
+          <label className="event-label ticket">Ticket Quantity*
             <input
               type="text"
               value={ticket_quantity}
@@ -123,7 +123,7 @@ class EventForm extends React.Component {
               className="event-input"/>
           </label>
 
-          <label>
+          <label className="event-label">
             <button
               onClick={this.upload}
               className="image-button">Upload Image</button>

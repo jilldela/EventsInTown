@@ -1,0 +1,81 @@
+/* line 1, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.nav-bar, .session-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #077187;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+  border: 0;
+}
+
+/* line 11, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.nav-bar {
+  z-index: 2;
+  position: fixed;
+  width: 100%;
+}
+
+/* line 17, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.nav-logo {
+  margin: 0;
+  padding: 20px;
+  background-color: inherit;
+  font-size: 36px;
+}
+
+/* line 24, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.session-links ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  color: white;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* line 34, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.session-links ul li {
+  border-right: 1px solid white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* line 40, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.login-links {
+  padding: 34px 20px;
+}
+
+/* line 43, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.session-links ul li:last-child {
+  border: 0;
+}
+
+/* line 47, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.session-button {
+  text-transform: uppercase;
+  padding: 34px 20px !important;
+  border: none;
+  outline: none;
+  outline-offset: 0;
+  background-color: inherit;
+}
+
+/* line 56, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+.nav-logo:hover, .session-links ul li:hover,
+.session-button:hover {
+  cursor: pointer;
+  background-color: #12383f;
+}
+
+/* line 63, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/nav.scss */
+header a:link, header a:hover, header a:visited,
+header ul li a:link, header ul li a:hover,
+header ul li a:visited {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}

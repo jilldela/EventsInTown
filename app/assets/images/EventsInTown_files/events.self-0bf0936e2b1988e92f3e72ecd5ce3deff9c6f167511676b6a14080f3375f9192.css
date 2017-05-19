@@ -1,0 +1,30 @@
+/* line 1, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/events.scss */
+.event-index-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 8, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/events.scss */
+.event-index-header {
+  display: flex;
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  color: #077187;
+}
+
+/* line 15, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/events.scss */
+.event-index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 21, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/events.scss */
+.cell-image {
+  height: 500px;
+  width: auto;
+  background-color: white;
+  opacity: 0.5;
+}

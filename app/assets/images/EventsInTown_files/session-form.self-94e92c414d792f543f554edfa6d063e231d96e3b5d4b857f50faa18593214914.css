@@ -1,0 +1,131 @@
+/* line 1, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.session-form-container {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  background-color: inherit;
+  opacity: 100%;
+  border: 0;
+}
+
+/* line 11, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.session-form-container:focus,
+.switch-form-button:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+/* line 17, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.switch-form {
+  font-family: 'Roboto', sans-serif;
+  font-size: 13px;
+  margin: 0;
+}
+
+/* line 23, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.switch-form-button {
+  padding: 15px;
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+}
+
+/* line 30, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.switch-form-button:hover {
+  background-color: #bfbdbd;
+  cursor: pointer;
+}
+
+/* line 35, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.modal-buttons {
+  list-style-type: none;
+  margin-bottom: 10px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+}
+
+/* line 44, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.form-header {
+  font-size: 36px;
+  margin: 20px 0;
+}
+
+/* line 49, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.modal-buttons li:first-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* line 54, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.modal-buttons li:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+/* line 59, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.session-form-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  width: 100%;
+  background: transparent;
+}
+
+/* line 69, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.session-input {
+  padding: 10px;
+  width: 75%;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.5s;
+}
+
+/* line 77, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.session-input:focus {
+  outline-color: #077187;
+  background-color: #F4F7F5;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* line 84, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.errors {
+  color: red;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+/* line 90, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.errors li {
+  padding: 5px;
+  margin: 0 20px;
+}
+
+/* line 95, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.submit-button {
+  background-color: #0eba8c;
+  color: white;
+  padding: 7.5px 10px !important;
+  outline: none;
+  outline-offset: 0;
+  width: 80%;
+  border: 1px solid #0eba8c;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+/* line 109, /Users/jill/Desktop/EventsInTown/app/assets/stylesheets/api/session-form.scss */
+.submit-button:hover {
+  background-color: #295E42;
+  border: 1px solid #295E42;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+}

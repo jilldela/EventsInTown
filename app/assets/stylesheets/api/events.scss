@@ -1,25 +1,31 @@
 .event-index-container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 }
 
 .event-index-header {
   display: flex;
-  font-family: 'Oswald', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 48px;
   color: #077187;
 }
 
 .event-index {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+}
+
+.carousel-cell {
+  display: flex;
+  justify-content: space-around;
 }
 
 .cell-image {
   height: 500px;
   width: auto;
-  background-color: white;
+  background-color: black;
   opacity: 0.5;
 }

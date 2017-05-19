@@ -19,7 +19,11 @@ class EventIndex extends React.Component {
     return (
       <div className="event-index-container">
         <h1 className="event-index-header">EventsIndex</h1>
-        <Carousel className="event-index" wrapAround={true}>
+        <Carousel
+          className="event-index"
+          wrapAround={true}
+          dragging={true}
+          cellAlign={'center'}>
           {events.map(eventDetail =>
             <EventIndexItem
               deleteEvent={deleteEvent}

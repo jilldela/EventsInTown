@@ -1,0 +1,53 @@
+.event-modal {
+}
+
+.event-form-box {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event-form-container:focus,
+.event-input:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.event-label {
+  margin: 5px 0;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.event-input {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column-reverse;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  border-bottom: 2px solid #077187;
+  width: 100%;
+}
+
+.date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.image-button {
+  padding: 15px;
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column-reverse;
+}
