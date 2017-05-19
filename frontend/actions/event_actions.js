@@ -47,6 +47,7 @@ export const createEvent = (eventDetail) => (dispatch) => (
     .then((respEventDetail) => {
       dispatch(receiveSingleEvent(respEventDetail));
       dispatch(clearErrors());
+      return respEventDetail;
     },
       errors => dispatch(receiveErrors(errors))
   )

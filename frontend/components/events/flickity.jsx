@@ -12,8 +12,6 @@ class Carousel extends React.Component {
   render() {
     const { events, deleteEvent, fetchEvents } = this.props;
 
-    debugger
-
     const flickityOptions = {
       cellAlign: "left",
       contain: true,

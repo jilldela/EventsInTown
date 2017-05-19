@@ -1,7 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
-// import EventForm from './event_form';
+import EventForm from './event_form';
 import ModalStyle from './modal_style';
 
 class EventModal extends React.Component {
@@ -25,6 +25,8 @@ class EventModal extends React.Component {
   }
 
   render() {
+    const { createEvent, session, errors } = this.props;
+
     return(
       <div className="event-modal">
         <button className="session-button" onClick={this.openModal}>
@@ -37,7 +39,10 @@ class EventModal extends React.Component {
           contentLabel="Event Form Modal"
           className="event-form-container">
 
-          EVENT FORM!
+          <EventForm
+            createEvent={createEvent}
+            session={session}
+            errors={errors}/>
 
         </Modal>
 

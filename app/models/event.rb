@@ -1,5 +1,5 @@
 class Event < ApplicationRecord
-  validates :organizer_id, :title, :location, :date, :time,
+  validates :organizer_id, :title, :location, :date,
             :image, :ticket_price, :ticket_quantity, presence: true
 
   belongs_to :organizer,

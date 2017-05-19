@@ -30,8 +30,6 @@ e1 = Event.create(
   ticket_quantity: 1000
 )
 
-debugger
-
 e2 = Event.create(
   organizer_id: jill.id,
   title: 'Island Reggae',

@@ -8,6 +8,7 @@
     "test": "test"
   },
   "scripts": {
+    "webpack": "webpack --watch",
     "postinstall": "webpack"
   },
   "repository": {
@@ -35,6 +36,8 @@
     "flickity": "^2.0.6",
     "lodash": "^4.17.4",
     "react": "^15.5.4",
+    "react-component-date-picker": "^0.9.10",
+    "react-datepicker": "^0.46.0",
     "react-dom": "^15.5.4",
     "react-flickity-component": "^0.1.0",
     "react-modal": "^1.7.7",

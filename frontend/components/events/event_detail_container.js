@@ -4,7 +4,7 @@ import EventDetail from './event_detail';
 import { fetchSingleEvent } from '../../actions/event_actions';
 
 const mapStateToProps = ({ eventDetail }) => ({
-  eventDetail
+  eventDetail: (eventDetail || {})
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -12,11 +12,11 @@ export const fetchSingleEvent = (id) => (
   })
 );
 
-export const createEvent = (eventDetail) => (
+export const createEvent = (event) => (
   $.ajax({
     method: 'POST',
     url: '/api/events',
-    data: { eventDetail }
+    data: { event }
   })
 );
 
