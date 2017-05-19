@@ -18,6 +18,8 @@ class EventForm extends React.Component {
       ticket_quantity: 0,
     };
 
+    this.handleCreate = this.handleCreate.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
     this.upload = this.upload.bind(this);
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -45,12 +47,29 @@ class EventForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    if (this.props.type === "Create An Event") {
+      this.handleCreate();
+    } else {
+      this.handleEdit();
+    }
+  }
+
+  handleCreate() {
     this.props.createEvent(this.state)
       .then(data => {
         this.props.history.push(`/events/${data.id}`);
         this.props.closeModal();
       }
-      );
+    );
+  }
+
+  handleEdit() {
+    this.props.updateEvent(this.state)
+      .then(data => {
+        this.props.history.push(`/events/${data.id}`);
+        this.props.closeModal();
+      }
+    );
   }
 
   renderErrors() {
@@ -68,10 +87,12 @@ class EventForm extends React.Component {
   render() {
     let { title, location, date, description, ticket_price, ticket_quantity } = this.state;
 
+
+
     return (
       <div>
         <form className="event-form-box" onSubmit={this.handleSubmit}>
-          <h2 className="form-header">Create An Event</h2>
+          <h2 className="form-header">{this.props.type}</h2>
           {this.renderErrors()}
 
           <label className="event-label">
@@ -129,7 +150,7 @@ class EventForm extends React.Component {
               className="image-button">Upload Image</button>
           </label>
 
-          <button className="submit-button">Create Event!</button>
+          <button className="submit-button">{this.props.type}</button>
 
         </form>
       </div>

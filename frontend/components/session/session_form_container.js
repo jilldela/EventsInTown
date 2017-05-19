@@ -14,7 +14,7 @@ const mapDispatchToProps = (dispatch, { type }) => {
   return {
     processForm: user => dispatch(processForm(user)),
     clearErrors: () => dispatch(clearErrors()),
-    type,
+    type
   };
 };
 

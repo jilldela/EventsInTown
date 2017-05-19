@@ -1,12 +1,32 @@
 import React from 'react';
 
+import Moment from 'react-moment';
+
+import EditModal from './edit_modal';
+
 class EventDetail extends React.Component {
   constructor(props) {
     super(props);
+
+    this.editButton = this.editButton.bind(this);
   }
 
   componentDidMount() {
     this.props.fetchSingleEvent(this.props.match.params.eventId);
+  }
+
+  editButton() {
+    const { eventDetail, session, updateEvent, errors } = this.props;
+
+    if (eventDetail.organizer && (session.currentUser.id === eventDetail.organizer_id)) {
+      return (
+        <EditModal
+          updateEvent={updateEvent}
+          eventDetail={eventDetail}
+          session={session}
+          errors={errors}/>
+      );
+    }
   }
 
   render() {
@@ -20,10 +40,12 @@ class EventDetail extends React.Component {
           <img src={`${eventDetail.image}`} className="event-image"/>
           <div className="hero-event-detail">
             <h1 className="event-title">{eventDetail.title}</h1>
-            <p>{eventDetail.date}</p>
+            <p><Moment date={eventDetail.date}/></p>
             <aside>
+              <p>{eventDetail.organizer}</p>
               <p>{eventDetail.location}</p>
               <p>${eventDetail.ticket_price}</p>
+              <div>{this.editButton()}</div>
             </aside>
           </div>
         </header>
@@ -39,8 +61,8 @@ class EventDetail extends React.Component {
           <aside>
             <ul className="event-detail">
               <li>{eventDetail.location}</li>
-              <li>{eventDetail.date}</li>
-              <li>{eventDetail.time}</li>
+              <li><Moment date={eventDetail.date}/></li>
+              <li><Moment parse="HH:mm">{eventDetail.time}</Moment></li>
             </ul>
           </aside>
         </div>
