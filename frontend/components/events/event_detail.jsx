@@ -62,7 +62,6 @@ class EventDetail extends React.Component {
             <ul className="event-detail">
               <li>{eventDetail.location}</li>
               <li><Moment date={eventDetail.date}/></li>
-              <li><Moment parse="HH:mm">{eventDetail.time}</Moment></li>
             </ul>
           </aside>
         </div>

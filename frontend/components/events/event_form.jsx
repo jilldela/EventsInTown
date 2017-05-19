@@ -8,14 +8,14 @@ class EventForm extends React.Component {
 
     this.state = {
       organizer_id: props.session.currentUser.id,
-      title: '',
-      location: '',
-      date: '',
-      time: '',
-      description: '',
-      image: '',
-      ticket_price: 0,
-      ticket_quantity: 0,
+      title: (props.eventDetail.title || ''),
+      location: (props.eventDetail.location || ''),
+      date: (props.eventDetail.date || ''),
+      time: (props.eventDetail.time || ''),
+      description: (props.eventDetail.description || ''),
+      image: (props.eventDetail.image || ''),
+      ticket_price: (props.eventDetail.ticket_price || 0),
+      ticket_quantity: (props.eventDetail.ticket_quantity || 0)
     };
 
     this.handleCreate = this.handleCreate.bind(this);
@@ -64,7 +64,9 @@ class EventForm extends React.Component {
   }
 
   handleEdit() {
-    this.props.updateEvent(this.state)
+    let newState = merge({}, this.props.eventDetail, this.state);
+
+    this.props.updateEvent(newState)
       .then(data => {
         this.props.history.push(`/events/${data.id}`);
         this.props.closeModal();
@@ -86,8 +88,7 @@ class EventForm extends React.Component {
 
   render() {
     let { title, location, date, description, ticket_price, ticket_quantity } = this.state;
-
-
+    let { eventDetail } = this.props;
 
     return (
       <div>

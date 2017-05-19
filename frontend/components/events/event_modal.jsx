@@ -25,7 +25,7 @@ class EventModal extends React.Component {
   }
 
   render() {
-    const { createEvent, session, errors, type } = this.props;
+    const { createEvent, session, errors, type, eventDetail } = this.props;
 
     return(
       <div className="event-modal">
@@ -41,6 +41,7 @@ class EventModal extends React.Component {
 
           <EventForm
             type={type}
+            eventDetail={{}}
             createEvent={createEvent}
             session={session}
             errors={errors}
