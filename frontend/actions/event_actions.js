@@ -6,6 +6,7 @@ export const RECEIVE_SINGLE_EVENT = "RECEIVE_SINGLE_EVENT";
 export const REMOVE_EVENT = "REMOVE_EVENT";
 
 //sync actions:
+
 export const receiveEvents = (events) => ({
   type: RECEIVE_EVENTS,
   events
@@ -22,6 +23,7 @@ export const removeEvent = (eventDetail) => ({
 });
 
 //async actions:
+
 export const fetchEvents = () => (dispatch) => (
   APIUtil.fetchEvents()
     .then((events) => {

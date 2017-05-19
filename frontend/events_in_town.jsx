@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as APIUtil from './util/event_api_util';
+import * as Action from './actions/user_actions';
 
-window.fetchUser = APIUtil.fetchUser;
+window.fetchUser = Action.fetchUser;
