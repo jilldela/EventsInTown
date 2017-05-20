@@ -1,10 +1,10 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import Carousel from 'nuka-carousel';
 
 import EventIndexItem from './event_index_item';
 
-class EventIndex extends React.Component {
+class EventIndexCarousel extends React.Component {
   constructor(props) {
     super(props);
   }
@@ -17,8 +17,13 @@ class EventIndex extends React.Component {
     const { events, deleteEvent } = this.props;
 
     return (
-      <div className="event-index-container">
-        <h1 className="event-index-header">EventsIndex</h1>
+      <div>
+        <Carousel
+          className="event-index"
+          wrapAround={true}
+          dragging={true}
+          cellAlign={'center'}>
+
           {events.map(eventDetail =>
             <EventIndexItem
               deleteEvent={deleteEvent}
@@ -26,10 +31,15 @@ class EventIndex extends React.Component {
               key={`event-${eventDetail.id}`}
               />
           )}
-      </div>
-    );
 
+        </Carousel>
+
+        <Link to="/events" className="event-index-link">View All Events</Link>
+      </div>
+
+
+    );
   }
 }
 
-export default EventIndex;
+export default EventIndexCarousel;

@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import EventIndex from './event_index';
+import EventIndexCarousel from './carousel';
 import { fetchEvents } from '../../actions/event_actions';
 import { selectAllEvents, deleteEvent } from '../../reducers/selectors';
 
@@ -16,4 +16,4 @@ const mapDispatchToProps = (dispatch) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(EventIndex);
+)(EventIndexCarousel);
