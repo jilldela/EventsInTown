@@ -20,6 +20,7 @@ const App = () => (
 
     <Route exact path="/" component={HeroImage} />
     <Route exact path="/" component={EventIndexContainer} />
+    <Route exact path="/events" component={EventIndexContainer} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
   </div>
 );
