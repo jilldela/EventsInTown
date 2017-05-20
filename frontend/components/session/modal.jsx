@@ -83,7 +83,8 @@ class SessionModal extends React.Component {
 
           <SessionForm
             type={this.state.type}
-            processForm={this.props.processForm}
+            requestLogIn={this.props.requestLogIn}
+            requestSignUp={this.props.requestSignUp}
             errors={this.props.errors}/>
 
         </Modal>
