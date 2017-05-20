@@ -19,6 +19,7 @@ class EventIndex extends React.Component {
     return (
       <div className="event-index-container">
         <h1 className="event-index-header">EventsIndex</h1>
+        <div className="event-index-items">
           {events.map(eventDetail =>
             <EventIndexItem
               deleteEvent={deleteEvent}
@@ -26,6 +27,7 @@ class EventIndex extends React.Component {
               key={`event-${eventDetail.id}`}
               />
           )}
+        </div>
       </div>
     );
 

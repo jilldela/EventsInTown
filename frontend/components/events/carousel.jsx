@@ -33,7 +33,6 @@ class EventIndexCarousel extends React.Component {
           )}
 
         </Carousel>
-
         <Link to="/events" className="event-index-link">View All Events</Link>
       </div>
 

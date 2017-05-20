@@ -12,12 +12,23 @@ class EventIndexItem extends React.Component {
     return (
 
         <div className="carousel-cell" >
-          <Link to={`/events/${eventDetail.id}`}>
-            <img
-              className="cell-image"
-              src={`${eventDetail.image}`}
-              alt={`${eventDetail.title}`}/>            
+          <Link to={`/events/${eventDetail.id}`} className="thumbnail">
+            <ul className="event-box">
+              <li className="thumbnail-image">
+                <img
+                  className="cell-image"
+                  src={`${eventDetail.image}`}
+                  alt={`${eventDetail.title}`}/>
+              </li>
+              <uL className="event-thumbnail-details">
+                <li>{eventDetail.title}</li>
+                <li>{eventDetail.date}</li>
+                <li>{eventDetail.location}</li>
+                <li>${eventDetail.ticket_price}</li>
+              </uL>
+            </ul>
           </Link>
+
         </div>
 
     );

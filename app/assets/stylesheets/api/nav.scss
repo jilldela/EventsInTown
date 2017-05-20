@@ -11,6 +11,8 @@
 .nav-bar {
   z-index: 2;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
 }
 
@@ -32,16 +34,12 @@
 }
 
 .session-links ul li {
-  border-right: 1px solid white;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 .login-links {
   padding: 34px 20px;
-}
-.session-links ul li:last-child {
-  border: 0;
 }
 
 .session-button {
@@ -56,7 +54,8 @@
 .nav-logo:hover, .session-links ul li:hover,
 .session-button:hover {
   cursor: pointer;
-  background-color: #12383f;
+  text-decoration: underline;
+  transition: 0.5s;
 }
 
 
@@ -66,4 +65,5 @@ header ul li a:visited {
   cursor: pointer;
   text-decoration: none;
   color: white;
+  transition: 0.5s;
 }

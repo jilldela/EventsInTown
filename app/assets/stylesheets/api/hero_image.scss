@@ -1,7 +1,15 @@
 .hero-image-container {
   font-family: 'Raleway', sans-serif;
-  padding-top: 89px;
-  font-size: 100px;
+  margin-top: 89px;
+  font-size: 64px;
+  color: #077187;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 300px 50px 50px 0;
+  background: linear-gradient(to bottom,#077187,white);
 }
 
 .hero-image-container img {
@@ -10,3 +18,17 @@
     min-height: 500px;
     min-width: 500px;
   }
+
+.event-index-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  color: #077187;
+  display: flex;
+  justify-content: space-around;
+  text-decoration: none;
+}
+
+.event-index-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
