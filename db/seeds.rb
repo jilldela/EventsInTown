@@ -39,7 +39,7 @@ location: 'California Academy of Sciences, San Francisco, CA',
 date: Date.new(2017,10,3),
 time: DateTime.new(2017,10,3,20,0,0),
 description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea.A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
-image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495427174/1_1200x900_trex_wu2gpd.jpg',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495485317/mezcal-nightlife-celebration-of-cinco-de-mayo-mex-i-am-sf-4_ziu0nu.jpg',
 ticket_price: 15,
 ticket_quantity: 300
 )
@@ -232,7 +232,7 @@ e18 = Event.create(
   date: Date.new(2018, 1, 16),
   time: DateTime.new(2018, 1, 16, 7, 0, 0),
   description: 'Come see our very own San Francisco Giants take on the Los Angeles Dodgers! While AT&T Park is known for its breathtaking views of the Bay and classic design, its top notch dining options also make it one of the best ballparks in the country. Hungry fans will can chow down on everything from sushi and Chinese food to cheese plates and salads made from ingredients grown on the property. And dont forget Gilroy Garlic Fries! The Park also has a plethora of local beers, wine and killer cocktails.',
-  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495472111/SFGiants_tp7ird.jpg',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495484983/ATT-Park-night_a9wxlp.jpg',
   ticket_price: 35,
   ticket_quantity: 100
 )
