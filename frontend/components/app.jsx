@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, Route } from 'react-router-dom';
 
+import Footer from './home/footer';
 import HeroImage from './home/hero';
 import NavBarContainer from './nav/nav_bar_container';
 import SessionFormContainer from './session/session_form_container';
@@ -21,6 +22,7 @@ const App = () => (
 
     <Route exact path="/" component={HeroImage} />
     <Route exact path="/" component={CarouselContainer} />
+    <Route path="/" component={Footer} />
     <Route exact path="/events" component={EventIndexContainer} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
   </div>

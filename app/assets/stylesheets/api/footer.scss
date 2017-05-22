@@ -1,0 +1,23 @@
+.footer {
+  background-color: #077187;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  padding: 20px 0;
+  list-style-type: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+}
+
+.footer ul li {
+  height: 75px;
+}
+
+.footer ul li:hover {
+  cursor: pointer;
+}
+
+.footer-icon {
+  height: 30px;
+}

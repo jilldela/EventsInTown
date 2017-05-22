@@ -32,7 +32,6 @@
   justify-content: space-between;
   align-items: center;
   list-style-type: none;
-  background-color: linear-gradient(to bottom right,#002f4b,#dc4225);
 }
 
 .carousel-cell {
@@ -57,13 +56,13 @@
 }
 
 .thumbnail-image {
-  background: linear-gradient(to bottom right,#002f4b,#dc4225);
+  // background: linear-gradient(to bottom right,#002f4b,#dc4225); //gradient over image
 }
 
 .cell-image {
   height: auto;
   width: 300px;
-  opacity: 0.2;
+  opacity: 0.5;
   transition: 1s;
 }
 
