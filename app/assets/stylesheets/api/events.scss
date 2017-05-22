@@ -17,6 +17,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 50px 0;
 }
 
 .event-index-items {
@@ -36,11 +37,20 @@
 .carousel-cell {
   display: flex;
   justify-content: flex-start;
-  margin: 10px 20%;
-  min-width: 650px;
+  margin: 15px 30%;
+  max-width: 650px;
   border: 1px solid #c6c6c6;
   border-radius: 10px;
   overflow: hidden;
+}
+
+.slider-decorator-2 {
+  bottom: -50px!important;
+}
+
+.slider-frame {
+  min-height: 315px!important;
+  margin: 20px 0!important;
 }
 
 
@@ -81,4 +91,29 @@
 .cell-image:hover {
   opacity: 1.0;
   transition: 1s;
+}
+
+.see-more-button {
+  display: flex;
+  justify-content: space-around;
+}
+
+.event-index-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  padding: 5px 20px;
+  border: 2px solid #077187;
+  border-radius: 8px;
+  margin: 30px 0px;
+  color: #077187;
+  text-decoration: none;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.event-index-link:hover {
+  background-color: #077187;
+  transition: 0.3s;
+  color: white;
+  cursor: pointer;
 }
