@@ -237,15 +237,38 @@ e18 = Event.create(
   ticket_quantity: 100
 )
 
+e19 = Event.create(
+  organizer_id: guest.id,
+  title: 'Off the Grid',
+  location: 'Fort Mason, San Francisco, CA',
+  date: Date.new(2018, 4, 22),
+  time: DateTime.new(2018, 4, 22, 7, 0, 0),
+  description: 'Off the Grid is a weekly outdoor food truck bonanza. Nearly 30 food vendors in a huge circle with a full bar and bands in the middle? Now that is what I call a party!',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495487769/off_the_grid_image1_am73xl.jpg',
+  ticket_price: 0,
+  ticket_quantity: 100
+)
+
+e20 = Event.create(
+  organizer_id: eric.id,
+  title: 'Travel Photography Class',
+  location: 'Fort Mason, San Francisco, CA',
+  date: Date.new(2017, 11, 22),
+  time: DateTime.new(2017, 11, 22, 7, 0, 0),
+  description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495488685/photo-1489156703850-ff36f4ed2465_lw2xbw.jpg',
+  ticket_price: 20,
+  ticket_quantity: 100
+)
+
+
+
 Category.destroy_all
-sports = Category.create(name: 'Sports')
+sports = Category.create(name: 'Sports & Wellness')
 music = Category.create(name: 'Music')
 food =  Category.create(name: 'Food & Drinks')
-arts =  Category.create(name: 'Arts')
+classes =  Category.create(name: 'Classes')
 entertainment =  Category.create(name: 'Entertainment')
-education =  Category.create(name: 'Education')
-outdoors =  Category.create(name: 'Outdoors')
-fitness =  Category.create(name: 'Health & Fitness')
 hobbies =  Category.create(name: 'Hobbies')
 family =  Category.create(name: 'Family')
 
@@ -254,34 +277,38 @@ ec1 = EventCategory.create(event_id: e1.id, category_id: entertainment.id)
 ec2a = EventCategory.create(event_id: e2.id, category_id: entertainment.id)
 ec2b = EventCategory.create(event_id: e2.id, category_id: music.id)
 ec2c = EventCategory.create(event_id: e2.id, category_id: family.id)
-ec3 = EventCategory.create(event_id: e3.id, category_id: fitness.id)
+ec3a = EventCategory.create(event_id: e3.id, category_id: sports.id)
+ec3b = EventCategory.create(event_id: e3.id, category_id: classes.id)
 ec4a = EventCategory.create(event_id: e4.id, category_id: hobbies.id)
-ec4b = EventCategory.create(event_id: e4.id, category_id: arts.id)
-ec5a = EventCategory.create(event_id: e5.id, category_id: arts.id)
+ec4b = EventCategory.create(event_id: e4.id, category_id: classes.id)
+ec5a = EventCategory.create(event_id: e5.id, category_id: classes.id)
 ec5b = EventCategory.create(event_id: e5.id, category_id: hobbies.id)
-ec6 = EventCategory.create(event_id: e6.id, category_id: fitness.id)
+ec6a = EventCategory.create(event_id: e6.id, category_id: sports.id)
+ec6b = EventCategory.create(event_id: e6.id, category_id: classes.id)
 ec7a = EventCategory.create(event_id: e7.id, category_id: entertainment.id)
 ec7b = EventCategory.create(event_id: e7.id, category_id: family.id)
-ec8a = EventCategory.create(event_id: e8.id, category_id: outdoors.id)
-ec8b = EventCategory.create(event_id: e8.id, category_id: fitness.id)
+ec8a = EventCategory.create(event_id: e8.id, category_id: sports.id)
+ec8b = EventCategory.create(event_id: e8.id, category_id: classes.id)
 ec9a = EventCategory.create(event_id: e9.id, category_id: sports.id)
 ec9b = EventCategory.create(event_id: e9.id, category_id: entertainment.id)
 ec10a = EventCategory.create(event_id: e10.id, category_id: entertainment.id)
 ec10b = EventCategory.create(event_id: e10.id, category_id: music.id)
 ec11 = EventCategory.create(event_id: e11.id, category_id: entertainment.id)
 ec12a = EventCategory.create(event_id: e12.id, category_id: food.id)
-ec12b = EventCategory.create(event_id: e12.id, category_id: education.id)
+ec12b = EventCategory.create(event_id: e12.id, category_id: music.id)
 ec13 = EventCategory.create(event_id: e13.id, category_id: family.id)
 ec14 = EventCategory.create(event_id: e14.id, category_id: hobbies.id)
 ec15a = EventCategory.create(event_id: e15.id, category_id: music.id)
 ec15b = EventCategory.create(event_id: e15.id, category_id: food.id)
-ec15c = EventCategory.create(event_id: e15.id, category_id: arts.id)
-ec15d = EventCategory.create(event_id: e15.id, category_id: entertainment.id)
-ec15e = EventCategory.create(event_id: e15.id, category_id: family.id)
+ec15c = EventCategory.create(event_id: e15.id, category_id: entertainment.id)
+ec15d = EventCategory.create(event_id: e15.id, category_id: family.id)
 ec16a = EventCategory.create(event_id: e16.id, category_id: family.id)
 ec16b = EventCategory.create(event_id: e16.id, category_id: food.id)
 ec17a = EventCategory.create(event_id: e17.id, category_id: family.id)
-ec17b = EventCategory.create(event_id: e17.id, category_id: fitness.id)
-ec17c = EventCategory.create(event_id: e17.id, category_id: sports.id)
+ec17b = EventCategory.create(event_id: e17.id, category_id: sports.id)
 ec18a = EventCategory.create(event_id: e18.id, category_id: sports.id)
 ec18b = EventCategory.create(event_id: e18.id, category_id: family.id)
+ec19a = EventCategory.create(event_id: e19.id, category_id: food.id)
+ec19b = EventCategory.create(event_id: e19.id, category_id: family.id)
+ec20a = EventCategory.create(event_id: e20.id, category_id: classes.id)
+ec20b = EventCategory.create(event_id: e20.id, category_id: hobbies.id)
