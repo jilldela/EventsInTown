@@ -20,52 +20,40 @@ ethan = User.create(username: 'Ethan', password: 'password')
 gavin = User.create(username: 'Gavin', password: 'password')
 
 Event.destroy_all
-e1 = Event.create(
-  organizer_id: guest.id,
-  title: 'Tahiti Fete',
-  location: 'San Jose, CA',
-  date: Date.new(2018, 7, 4),
-  time: DateTime.new(2018, 7, 4, 10, 0, 0),
-  description: 'The largest Tahitian dance competition in the United States.',
-  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425523/TF_MANUIA_APARIMA_f7qvkp.jpg',
-  ticket_price: 50,
-  ticket_quantity: 1000
-)
-
-e2 = Event.create(
-  organizer_id: jill.id,
-  title: 'Island Reggae',
-  location: 'Santa Clara, CA',
-  date: Date.new(2017, 7, 8),
-  time: DateTime.new(2017, 7, 8, 11, 0, 0),
-  description: '1-Day music & entertainment celebration of Island Reggae culture and lifestyle.',
-  image: 'https://static.wixstatic.com/media/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.jpg/v1/fill/w_773,h_762,al_c,q_85,usm_0.66_1.00_0.01/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.webp',
-  ticket_price: 60,
-  ticket_quantity: 1000
-)
-
-e3 = Event.create(
-  organizer_id: cheryl.id,
-  title: 'MTD Boot Camp',
-  location: 'San Francisco, CA',
-  date: Date.new(2018, 10, 8),
-  time: DateTime.new(2018, 10, 8, 7, 0, 0),
-  description: 'Join our #muaythaidiaries class to learn how to punch, kick and knee like a real Muay Thai fighter.',
-  image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F23174886%2F183424568654%2F1%2Foriginal.jpg?w=800&rect=0%2C225%2C1650%2C825&s=e2dd5057f3b8224638b90f72790669a8',
-  ticket_price: 25,
-  ticket_quantity: 30
-)
-
 e4 = Event.create(
-  organizer_id: eric.id,
-  title: 'Paint Brushes Going Up!',
-  location: 'San Francisco, CA',
-  date: Date.new(2018, 8,14),
-  time: DateTime.new(2018,8,14,14,0,0),
-  description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
-  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425629/photo-1461344577544-4e5dc9487184_jlrphg.jpg',
-  ticket_price: 0,
-  ticket_quantity: 15
+organizer_id: eric.id,
+title: 'Paint Brushes Going Up!',
+location: 'San Francisco, CA',
+date: Date.new(2018, 8,14),
+time: DateTime.new(2018,8,14,14,0,0),
+description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425629/photo-1461344577544-4e5dc9487184_jlrphg.jpg',
+ticket_price: 0,
+ticket_quantity: 15
+)
+
+e12 = Event.create(
+organizer_id: gavin.id,
+title: 'Cal Academy of Sciences NightLife',
+location: 'California Academy of Sciences, San Francisco, CA',
+date: Date.new(2017,10,3),
+time: DateTime.new(2017,10,3,20,0,0),
+description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea.A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495427174/1_1200x900_trex_wu2gpd.jpg',
+ticket_price: 15,
+ticket_quantity: 300
+)
+
+e9 = Event.create(
+organizer_id: guest.id,
+title: 'Warriors vs Cavaliers',
+location: 'Oakland, CA',
+date: Date.new(2018,5,25),
+time: DateTime.new(2018,5,25,19,0,0),
+description: 'Outside the Oracle, this is the biggest Warriors game watch party in San Francisco! We have everything you need to cheer on the Dubs as they battle through the 2018 playoffs. Watch the game in good company, with the loyal members of dubnation living it up outdoors with tons of seating, TVs, beer specials and food trucks.',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495225789/25warriors-web-master768_hqovsi.jpg',
+ticket_price: 20,
+ticket_quantity: 300
 )
 
 e5 = Event.create(
@@ -116,17 +104,42 @@ e8 = Event.create(
     ticket_quantity: 30
   )
 
-e9 = Event.create(
-    organizer_id: guest.id,
-    title: 'Warriors vs Cavaliers',
-    location: 'Oakland, CA',
-    date: Date.new(2018,5,25),
-    time: DateTime.new(2018,5,25,19,0,0),
-    description: 'Outside the Oracle, this is the biggest Warriors game watch party in San Francisco! We have everything you need to cheer on the Dubs as they battle through the 2018 playoffs. Watch the game in good company, with the loyal members of dubnation living it up outdoors with tons of seating, TVs, beer specials and food trucks.',
-    image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495225789/25warriors-web-master768_hqovsi.jpg',
-    ticket_price: 20,
-    ticket_quantity: 300
+  e2 = Event.create(
+  organizer_id: jill.id,
+  title: 'Island Reggae',
+  location: 'Santa Clara, CA',
+  date: Date.new(2017, 7, 8),
+  time: DateTime.new(2017, 7, 8, 11, 0, 0),
+  description: '1-Day music & entertainment celebration of Island Reggae culture and lifestyle.',
+  image: 'https://static.wixstatic.com/media/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.jpg/v1/fill/w_773,h_762,al_c,q_85,usm_0.66_1.00_0.01/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.webp',
+  ticket_price: 60,
+  ticket_quantity: 1000
   )
+
+  e1 = Event.create(
+  organizer_id: guest.id,
+  title: 'Tahiti Fete',
+  location: 'San Jose, CA',
+  date: Date.new(2018, 7, 4),
+  time: DateTime.new(2018, 7, 4, 10, 0, 0),
+  description: 'The largest Tahitian dance competition in the United States.',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425523/TF_MANUIA_APARIMA_f7qvkp.jpg',
+  ticket_price: 50,
+  ticket_quantity: 1000
+  )
+
+  e3 = Event.create(
+  organizer_id: cheryl.id,
+  title: 'MTD Boot Camp',
+  location: 'San Francisco, CA',
+  date: Date.new(2018, 10, 8),
+  time: DateTime.new(2018, 10, 8, 7, 0, 0),
+  description: 'Join our #muaythaidiaries class to learn how to punch, kick and knee like a real Muay Thai fighter.',
+  image: 'https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F23174886%2F183424568654%2F1%2Foriginal.jpg?w=800&rect=0%2C225%2C1650%2C825&s=e2dd5057f3b8224638b90f72790669a8',
+  ticket_price: 25,
+  ticket_quantity: 30
+  )
+
 
 e10 = Event.create(
     organizer_id: jill.id,
@@ -140,6 +153,18 @@ e10 = Event.create(
     ticket_quantity: 1000
   )
 
+  e13 = Event.create(
+  organizer_id: jack.id,
+  title: 'Bay Area Peace Lantern Ceremony',
+  location: 'Aquatic Park, Berkeley, CA',
+  date: Date.new(2017, 9, 5),
+  time: DateTime.new(2017, 9, 5, 18, 30, 0),
+  description: 'Join us for the 16th annual Peace Lantern Ceremony at the north end of Berkeley Aquatic Park.',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495427793/d5f32508_ac0map.jpg',
+  ticket_price: 0,
+  ticket_quantity: 0
+  )
+
 e11 = Event.create(
     organizer_id: ethan.id,
     title: 'Jo Koy',
@@ -151,30 +176,6 @@ e11 = Event.create(
     ticket_price: 30,
     ticket_quantity: 100
   )
-
-e12 = Event.create(
-    organizer_id: gavin.id,
-    title: 'Cal Academy of Sciences NightLife',
-    location: 'California Academy of Sciences, San Francisco, CA',
-    date: Date.new(2017,10,3),
-    time: DateTime.new(2017,10,3,20,0,0),
-    description: 'A new adventure unfolds every Thursday night from 6-10pm. Enjoy music, creatures, and cocktails as you set out with friends on a journey to the stars and the depths of the sea.A variety of food options are available at NightLife from 6-9:30 pm, including the Academy Café, The Terrace (located in the West Garden), and convenient food cart in the front lobby.',
-    image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495427174/1_1200x900_trex_wu2gpd.jpg',
-    ticket_price: 15,
-    ticket_quantity: 300
-  )
-
-e13 = Event.create(
-  organizer_id: jack.id,
-  title: 'Bay Area Peace Lantern Ceremony',
-  location: 'Aquatic Park, Berkeley, CA',
-  date: Date.new(2017, 9, 5),
-  time: DateTime.new(2017, 9, 5, 18, 30, 0),
-  description: 'Join us for the 16th annual Peace Lantern Ceremony at the north end of Berkeley Aquatic Park.',
-  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495427793/d5f32508_ac0map.jpg',
-  ticket_price: 0,
-  ticket_quantity: 0
-)
 
 e14 = Event.create(
   organizer_id: gavin.id,
@@ -223,3 +224,64 @@ e17 = Event.create(
   ticket_price: 35,
   ticket_quantity: 100
 )
+
+e18 = Event.create(
+  organizer_id: guest.id,
+  title: 'SF Giants  vs. LA Dodgers',
+  location: 'AT&T Park, San Francisco, CA',
+  date: Date.new(2018, 1, 16),
+  time: DateTime.new(2018, 1, 16, 7, 0, 0),
+  description: 'Come see our very own San Francisco Giants take on the Los Angeles Dodgers! While AT&T Park is known for its breathtaking views of the Bay and classic design, its top notch dining options also make it one of the best ballparks in the country. Hungry fans will can chow down on everything from sushi and Chinese food to cheese plates and salads made from ingredients grown on the property. And dont forget Gilroy Garlic Fries! The Park also has a plethora of local beers, wine and killer cocktails.',
+  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495472111/SFGiants_tp7ird.jpg',
+  ticket_price: 35,
+  ticket_quantity: 100
+)
+
+Category.destroy_all
+sports = Category.create(name: 'Sports')
+music = Category.create(name: 'Music')
+food =  Category.create(name: 'Food & Drinks')
+arts =  Category.create(name: 'Arts')
+entertainment =  Category.create(name: 'Entertainment')
+education =  Category.create(name: 'Education')
+outdoors =  Category.create(name: 'Outdoors')
+fitness =  Category.create(name: 'Health & Fitness')
+hobbies =  Category.create(name: 'Hobbies')
+family =  Category.create(name: 'Family')
+
+EventCategory.destroy_all
+ec1 = EventCategory.create(event_id: e1.id, category_id: entertainment.id)
+ec2a = EventCategory.create(event_id: e2.id, category_id: entertainment.id)
+ec2b = EventCategory.create(event_id: e2.id, category_id: music.id)
+ec2c = EventCategory.create(event_id: e2.id, category_id: family.id)
+ec3 = EventCategory.create(event_id: e3.id, category_id: fitness.id)
+ec4a = EventCategory.create(event_id: e4.id, category_id: hobbies.id)
+ec4b = EventCategory.create(event_id: e4.id, category_id: arts.id)
+ec5a = EventCategory.create(event_id: e5.id, category_id: arts.id)
+ec5b = EventCategory.create(event_id: e5.id, category_id: hobbies.id)
+ec6 = EventCategory.create(event_id: e6.id, category_id: fitness.id)
+ec7a = EventCategory.create(event_id: e7.id, category_id: entertainment.id)
+ec7b = EventCategory.create(event_id: e7.id, category_id: family.id)
+ec8a = EventCategory.create(event_id: e8.id, category_id: outdoors.id)
+ec8b = EventCategory.create(event_id: e8.id, category_id: fitness.id)
+ec9a = EventCategory.create(event_id: e9.id, category_id: sports.id)
+ec9b = EventCategory.create(event_id: e9.id, category_id: entertainment.id)
+ec10a = EventCategory.create(event_id: e10.id, category_id: entertainment.id)
+ec10b = EventCategory.create(event_id: e10.id, category_id: music.id)
+ec11 = EventCategory.create(event_id: e11.id, category_id: entertainment.id)
+ec12a = EventCategory.create(event_id: e12.id, category_id: food.id)
+ec12b = EventCategory.create(event_id: e12.id, category_id: education.id)
+ec13 = EventCategory.create(event_id: e13.id, category_id: family.id)
+ec14 = EventCategory.create(event_id: e14.id, category_id: hobbies.id)
+ec15a = EventCategory.create(event_id: e15.id, category_id: music.id)
+ec15b = EventCategory.create(event_id: e15.id, category_id: food.id)
+ec15c = EventCategory.create(event_id: e15.id, category_id: arts.id)
+ec15d = EventCategory.create(event_id: e15.id, category_id: entertainment.id)
+ec15e = EventCategory.create(event_id: e15.id, category_id: family.id)
+ec16a = EventCategory.create(event_id: e16.id, category_id: family.id)
+ec16b = EventCategory.create(event_id: e16.id, category_id: food.id)
+ec17a = EventCategory.create(event_id: e17.id, category_id: family.id)
+ec17b = EventCategory.create(event_id: e17.id, category_id: fitness.id)
+ec17c = EventCategory.create(event_id: e17.id, category_id: sports.id)
+ec18a = EventCategory.create(event_id: e18.id, category_id: sports.id)
+ec18b = EventCategory.create(event_id: e18.id, category_id: family.id)
