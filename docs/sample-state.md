@@ -52,6 +52,13 @@
       'Performance'
       ]
   },
+  categories: {
+    1: {
+      events: [1]
+    },
+    id: 1,
+    name: 'Music'
+  },
   user: {
     events: {
       1   //event_ids for user's registered events
