@@ -4,6 +4,7 @@
   position: absolute;
   top: 89px;
   font-family: 'Raleway', sans-serif;
+  letter-spacing: 0.5px;
   width: 100%;
 }
 
@@ -19,7 +20,7 @@
   justify-content: space-between;
   align-items: flex-end;
   text-align: right;
-  margin: 25px;
+  margin: 35px;
 }
 
 .event-detail-header h1 {
@@ -79,15 +80,32 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: 30px;
+  width: 30%;
+}
+
+.event-detail ul {
+  list-style-type: none;
+}
+
+.event-detail ul li {
+  margin: 10px 0;
 }
 
 .event-image {
   width: 50%;
   height: 50%;
   display: flex;
+  margin: 35px 0 35px 35px;
+  border-radius: 10px;
 }
 
 .event-description h1 {
   font-size: 24px;
   font-weight: bold;
+}
+
+.event-description {
+  margin: 20px;
+  width: 60%;
 }

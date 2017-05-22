@@ -1,5 +1,6 @@
 import React from 'react';
 
+import moment from 'moment';
 import Moment from 'react-moment';
 
 import EditModal from './edit_modal';
@@ -43,9 +44,9 @@ class EventDetail extends React.Component {
           <img src={`${eventDetail.image}`} className="event-image"/>
           <div className="hero-event-detail">
             <h1 className="event-title">{eventDetail.title}</h1>
-            <p><Moment date={eventDetail.date}/></p>
+            <p>Hosted by: {eventDetail.organizer}</p>
             <aside>
-              <p>{eventDetail.organizer}</p>
+              <p>{moment(eventDetail.date).format('MMM Do YYYY')}</p>
               <p>{eventDetail.location}</p>
               <p>${eventDetail.ticket_price}</p>
               <div>{this.editButton()}</div>
@@ -64,10 +65,10 @@ class EventDetail extends React.Component {
             <h1>Description</h1>
             <p>{eventDetail.description}</p>
           </div>
-          <aside>
-            <ul className="event-detail">
-              <li>{eventDetail.location}</li>
-              <li><Moment date={eventDetail.date}/></li>
+          <aside className="event-detail">
+            <ul>
+              <li>Date:<br/> {moment(eventDetail.date).format('MMM Do YYYY')}</li>
+              <li>Location:<br/>{eventDetail.location}</li>
             </ul>
           </aside>
         </div>
