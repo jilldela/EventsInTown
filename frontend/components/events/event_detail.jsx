@@ -53,7 +53,10 @@ class EventDetail extends React.Component {
           </div>
         </header>
         <div className="ticket-bar">
-          <img src="assets/bookmark.png" alt="bookmark" className="bookmark"/>
+          <img
+            src="http://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
+            alt="bookmark"
+            className="bookmark"/>
           <button className="ticket-button">TICKETS</button>
         </div>
         <div className="main-detail-container">
