@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as APIUtil from './util/category_api_util';
+import * as Action from './actions/category_actions';
 
-window.fetchCategories = APIUtil.fetchCategories;
-window.fetchSingleCategory = APIUtil.fetchSingleCategory;
+window.fetchCategories = Action.fetchCategories;
+window.fetchSingleCategory = Action.fetchSingleCategory;
