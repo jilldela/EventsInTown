@@ -1,3 +1,4 @@
+
 import { connect } from 'react-redux';
 
 import CategoryIndex from './category_index';

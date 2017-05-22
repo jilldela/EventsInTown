@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as Action from './actions/event_actions';
+import * as APIUtil from './util/category_api_util';
 
-window.deleteEvent = Action.deleteEvent;
+window.fetchCategories = APIUtil.fetchCategories;
+window.fetchSingleCategory = APIUtil.fetchSingleCategory;
