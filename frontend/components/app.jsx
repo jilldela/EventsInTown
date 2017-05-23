@@ -9,6 +9,7 @@ import CarouselContainer from './events/carousel_container';
 import EventIndexContainer from './events/event_index_container';
 import EventDetailContainer from './events/event_detail_container';
 import CategoryIndexContainer from './categories/category_index_container';
+import CategoryEventsContainer from './categories/category_events_container';
 
 const App = () => (
   <div className="app">
@@ -27,7 +28,8 @@ const App = () => (
 
     <Route exact path="/events" component={EventIndexContainer} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
-    
+    <Route exact path="/categories/:name" component={CategoryEventsContainer} />
+
     <Route path="/" component={Footer} />
   </div>
 );

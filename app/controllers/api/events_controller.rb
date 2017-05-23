@@ -1,7 +1,13 @@
 class Api::EventsController < ApplicationController
 
   def index
-    @events = Event.all
+    if params[:name]
+      @events = Event.joins(:categories).where("categories.name = ?", params[:name])
+    else
+      @events = Event.all
+    end
+
+    render "api/events/index"
   end
 
   def show

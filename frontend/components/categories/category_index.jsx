@@ -21,10 +21,12 @@ class CategoryIndex extends React.Component {
         <div className="category-list">
 
           <div className="category-image-large">
-            <Link to="/categories/sports" className="category-link">
+            <Link
+              to="/categories/sports"
+              className="category-link">
               <div className="category-pic-sports">
                 <div className="category-hover-content">
-                  <div className="category-title">Sports</div>
+                  <div className="category-title">Sports & Wellness</div>
                   <span className="category-description-overlay">
                     Obstacle races, big games, and drop-in yoga classes
                   </span>

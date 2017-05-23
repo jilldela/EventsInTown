@@ -97,6 +97,12 @@
   .category-hover-content {
     background: transparent;
     color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    text-shadow: 1px 1px 2px black;
   }
 
 }
@@ -105,25 +111,25 @@
   opacity: 1.0;
   color: white;
   font-size: 18px;
-  z-index: 100;
-  text-shadow: 1px 1px 2px black;
+  z-index: 5;
 }
 
 
 .category-title {
   background: transparent;
-  font-size: 24px;
+  font-size: 36px;
+}
+
+.category-image-small,
+.category-image-large {
+  padding: 15px;
+  box-sizing: border-box;
 }
 
 .category-image-small {
   width: 33%;
-  overflow: hidden;
-  padding: 10px;
-  box-sizing: border-box;
 }
 
 .category-image-large {
   width: 66%;
-  padding: 10px;
-  box-sizing: border-box;
 }

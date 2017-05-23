@@ -5,9 +5,9 @@ export const fetchCategories = () => (
   })
 );
 
-export const fetchSingleCategory = (id) => (
+export const fetchSingleCategory = (categoryName) => (
   $.ajax({
     method: 'GET',
-    url: `api/categories/${id}`
+    url: `api/categories/${categoryName}`
   })
 );

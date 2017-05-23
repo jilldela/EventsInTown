@@ -30,7 +30,7 @@ export const fetchEvents = () => (dispatch) => (
       dispatch(receiveEvents(events));
       dispatch(clearErrors());
     },
-      errors => dispatch(receiveErrors())
+      errors => dispatch(receiveErrors(errors))
   )
 );
 
