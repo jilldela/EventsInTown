@@ -11,6 +11,8 @@ class EventIndexItem extends React.Component {
   render() {
     const { eventDetail } = this.props;
 
+    console.log(eventDetail);
+
     return (
 
         <div className="carousel-cell" >
@@ -24,6 +26,7 @@ class EventIndexItem extends React.Component {
                 <li>{eventDetail.title}</li>
                 <li>{moment(eventDetail.date).format('MMMM Do YYYY')}</li>
                 <li>{eventDetail.location}</li>
+                <li>{eventDetail.categories.map(category => `${category.name}. `)}</li>
                 <li>${eventDetail.ticket_price}</li>
               </uL>
             </ul>
