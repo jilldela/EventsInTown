@@ -24,10 +24,11 @@ const App = () => (
     <Route exact path="/" component={HeroImage} />
     <Route exact path="/" component={CarouselContainer} />
     <Route exact path="/" component={CategoryIndexContainer} />
-    <Route path="/" component={Footer} />
 
     <Route exact path="/events" component={EventIndexContainer} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
+    
+    <Route path="/" component={Footer} />
   </div>
 );
 

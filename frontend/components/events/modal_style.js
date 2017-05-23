@@ -11,15 +11,15 @@ module.exports = {
   content : {
     position        : 'fixed',
     top             : '15%',
-    left            : '15%',
-    right           : '20%',
-    bottom          : '20%',
+    left            : '25%',
+    right           : '25%',
+    bottom          : '15%',
     minHeight      : '500px',
     minWidth       : '500px',
     border          : '1px solid #ccc',
     borderRadius    : '5px',
     backgroundColor: 'white',
-    padding         : '10px',
+    padding         : '30px',
     zIndex          : 11
   },
 };

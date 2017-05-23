@@ -141,7 +141,7 @@ class EventForm extends React.Component {
               value={description}
               onChange={this.update('description')}
               placeholder="Description *"
-              className="event-input event-description"></textarea>
+              className="event-input event-description-input"></textarea>
           </label>
 
           <label className="event-label ticket">Ticket Price*
