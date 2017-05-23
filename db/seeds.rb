@@ -27,7 +27,7 @@ location: 'San Francisco, CA',
 date: Date.new(2018, 8,14),
 time: DateTime.new(2018,8,14,14,0,0),
 description: 'Paint the town! Join us for a night of painting, wine/beer, and fun! Bring your friends!',
-image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425629/photo-1461344577544-4e5dc9487184_jlrphg.jpg',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495503313/pexels-photo-114123_bkp3nz.jpg',
 ticket_price: 0,
 ticket_quantity: 15
 )
@@ -264,13 +264,14 @@ e20 = Event.create(
 
 
 Category.destroy_all
-sports = Category.create(name: 'Sports & Wellness')
-music = Category.create(name: 'Music')
-food =  Category.create(name: 'Food & Drinks')
-classes =  Category.create(name: 'Classes')
-entertainment =  Category.create(name: 'Entertainment')
-hobbies =  Category.create(name: 'Hobbies')
-family =  Category.create(name: 'Family')
+sports = Category.create(name: 'Sports & Wellness', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495501357/pexels-photo-317157_ka6oie.jpg')
+music = Category.create(name: 'Music', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495498984/photo-1415201364774-f6f0bb35f28f_cxxe8z.jpg')
+food =  Category.create(name: 'Food & Drinks', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495499855/food-eating-potatoes-beer-8313_itwyod.jpg')
+classes =  Category.create(name: 'Classes', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495501786/pexels-photo_uw7amx.jpg')
+entertainment =  Category.create(name: 'Entertainment', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495225758/lights-party-dancing-music_mmurb5.jpg')
+hobbies =  Category.create(name: 'Hobbies', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495425629/photo-1461344577544-4e5dc9487184_jlrphg.jpg')
+family =  Category.create(name: 'Family', image_url: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495500164/pexels-photo-61129_xuf9cz.jpg')
+
 
 EventCategory.destroy_all
 ec1 = EventCategory.create(event_id: e1.id, category_id: entertainment.id)

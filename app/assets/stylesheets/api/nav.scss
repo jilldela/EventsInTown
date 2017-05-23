@@ -58,6 +58,9 @@
   transition: 0.5s;
 }
 
+a:link, a:hover, a:visited {
+  text-decoration: none;
+}
 
 header a:link, header a:hover, header a:visited,
 header ul li a:link, header ul li a:hover,

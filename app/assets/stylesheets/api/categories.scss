@@ -1,3 +1,129 @@
 // Place all the styles related to the api/categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.category-index {
+  font-family: 'Raleway', sans-serif;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.category-index h1 {
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+}
+
+.category-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.category-image {
+  width: auto;
+  height: 250px;
+}
+
+.category-pic-sports {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495501357/pexels-photo-317157_ka6oie.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-music {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495498984/photo-1415201364774-f6f0bb35f28f_cxxe8z.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-entertainment {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495225758/lights-party-dancing-music_mmurb5.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-food {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495499855/food-eating-potatoes-beer-8313_itwyod.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-classes {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495508287/Fitness-Class-Screenshot_jpilyh.png");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-networking {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495509989/people-woman-coffee-meeting_mgysah.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-pic-family {
+  background-image: url("http://res.cloudinary.com/db08acmvn/image/upload/v1495510195/photo-1460176449511-ff5fc8e64c35_q07nqp.jpg");
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.category-link {
+  display: block!important;
+  transition: 0.3s;
+
+  &:hover {
+    .category-hover-content {
+      background: rgba(0,0,0,0.5);
+      color: white;
+      height: 100%;
+      transition: 0.3s;
+    }
+  }
+  .category-hover-content {
+    background: transparent;
+    color: white;
+  }
+
+}
+
+.category-description-overlay {
+  opacity: 1.0;
+  color: white;
+  font-size: 18px;
+  z-index: 100;
+  text-shadow: 1px 1px 2px black;
+}
+
+
+.category-title {
+  background: transparent;
+  font-size: 24px;
+}
+
+.category-image-small {
+  width: 33%;
+  overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.category-image-large {
+  width: 66%;
+  padding: 10px;
+  box-sizing: border-box;
+}

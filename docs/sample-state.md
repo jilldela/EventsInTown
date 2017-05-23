@@ -31,7 +31,7 @@
         image: image_url,
         ticket_price: 0
         categories: [
-          'Hobbies',
+          'networking',
           'Things To Do'
           ]
       }
