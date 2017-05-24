@@ -1,0 +1,27 @@
+.ticket-modal-container {
+  font-family: 'Raleway', sans-serif;
+}
+
+.ticket-modal-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 22px;
+  padding: 10px 0;
+  border-bottom: 1px solid #c6c6c6;
+}
+
+.ticket-modal-container:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.ticket-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80%;
+}
+
+.ticket-form {
+  border: 1px solid #c6c6c6;
+}

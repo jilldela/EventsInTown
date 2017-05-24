@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 
+import TicketForm from './ticket_form';
 import ModalStyle from './modal_style';
 
 class TicketBar extends React.Component {
@@ -36,11 +37,17 @@ class TicketBar extends React.Component {
             isOpen={this.state.openModal}
             onRequestClose={this.closeModal}
             style={ModalStyle}
-            contentLabel="Session Modal"
-            className="session-form-container">
+            contentLabel="Tickets Modal"
+            className="ticket-modal-container">
 
-            Inside the modal!
-            
+            <header className="ticket-modal-header">
+              Select Tickets
+              <button
+                onClick={this.closeModal}
+                className="close-modal-button">X</button>
+            </header>
+            <TicketForm closeModal={this.closeModal}/>
+
           </Modal>
       </div>
     );
