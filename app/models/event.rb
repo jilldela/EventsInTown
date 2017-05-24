@@ -8,6 +8,7 @@ class Event < ApplicationRecord
     class_name: :User
 
   has_many :event_categories
+  has_many :tickets
 
   has_many :categories,
     through: :event_categories,

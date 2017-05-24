@@ -1,9 +1,11 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 import moment from 'moment';
 import Moment from 'react-moment';
 
 import EditModal from './edit_modal';
+import TicketBar from '../tickets/ticket_bar';
 
 class EventDetail extends React.Component {
   constructor(props) {
@@ -53,13 +55,7 @@ class EventDetail extends React.Component {
             </aside>
           </div>
         </header>
-        <div className="ticket-bar">
-          <img
-            src="http://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
-            alt="bookmark"
-            className="bookmark"/>
-          <button className="ticket-button">TICKETS</button>
-        </div>
+        <Route path="/events/:id" component={TicketBar} />
         <div className="main-detail-container">
           <div className="event-description">
             <h1>Description</h1>

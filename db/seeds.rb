@@ -7,11 +7,11 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-guest = User.create(username: 'guest', password: 'password')
+guest = User.create(username: 'Guest', password: 'password')
 jill = User.create(username: 'Jill', password: 'password')
 john = User.create(username: 'John', password: 'password')
 jack = User.create(username: 'Jack', password: 'password')
-eric = User.create(username: 'eRiCxOxO', password: 'password')
+eric = User.create(username: 'Eric', password: 'password')
 alaina = User.create(username: 'Alaina', password: 'password')
 rina = User.create(username: 'Rina', password: 'password')
 cheryl = User.create(username: 'Cheryl', password: 'password')
@@ -314,3 +314,7 @@ ec19a = EventCategory.create(event_id: e19.id, category_id: food.id)
 ec19b = EventCategory.create(event_id: e19.id, category_id: family.id)
 ec20a = EventCategory.create(event_id: e20.id, category_id: classes.id)
 ec20b = EventCategory.create(event_id: e20.id, category_id: networking.id)
+
+Ticket.destroy_all
+t1 = Ticket.create(event_id: e5.id, user_id: guest.id)
+t2 = Ticket.create(event_id: e9.id, user_id: guest.id)
