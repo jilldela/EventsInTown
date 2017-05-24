@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 
 import TicketForm from './ticket_form';
+import SessionForm from '../session/session_form';
 import ModalStyle from './modal_style';
 
 class TicketBar extends React.Component {
@@ -14,6 +15,7 @@ class TicketBar extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.formType = this.formType.bind(this);
   }
 
   openModal() {
@@ -24,7 +26,27 @@ class TicketBar extends React.Component {
     this.setState({openModal: false});
   }
 
+  formType() {
+    if (this.props.loggedIn === false) {
+      return (
+        <SessionForm
+          type="Log In"
+          requestLogIn={this.props.requestLogIn}
+          requestSignUp={this.props.requestSignUp}
+          errors={this.props.errors} />
+      );
+    } else {
+      return (
+        <TicketForm
+          closeModal={this.closeModal}
+          eventDetail={this.props.eventDetail}/>
+      );
+    }
+  }
+
   render() {
+    console.log(this.props);
+
     return (
       <div className="ticket-bar">
         <img
@@ -40,13 +62,7 @@ class TicketBar extends React.Component {
             contentLabel="Tickets Modal"
             className="ticket-modal-container">
 
-            <header className="ticket-modal-header">
-              Select Tickets
-              <button
-                onClick={this.closeModal}
-                className="close-modal-button">X</button>
-            </header>
-            <TicketForm closeModal={this.closeModal}/>
+            {this.formType()}
 
           </Modal>
       </div>

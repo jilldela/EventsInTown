@@ -1,11 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+import { Route, withRouter } from 'react-router-dom';
 
 import moment from 'moment';
 import Moment from 'react-moment';
 
 import EditModal from './edit_modal';
-import TicketBar from '../tickets/ticket_bar';
+import TicketBarContainer from '../tickets/ticket_bar_container';
 
 class EventDetail extends React.Component {
   constructor(props) {
@@ -55,7 +55,9 @@ class EventDetail extends React.Component {
             </aside>
           </div>
         </header>
-        <Route path="/events/:id" component={TicketBar} />
+
+        <TicketBarContainer />
+
         <div className="main-detail-container">
           <div className="event-description">
             <h1>Description</h1>
@@ -73,4 +75,4 @@ class EventDetail extends React.Component {
   }
 }
 
-export default EventDetail;
+export default withRouter(EventDetail);
