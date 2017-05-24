@@ -3,6 +3,7 @@ import { Link, Route } from 'react-router-dom';
 
 import Footer from './home/footer';
 import HeroImage from './home/hero';
+import CategoryList from './categories/category_list';
 import NavBarContainer from './nav/nav_bar_container';
 import SessionFormContainer from './session/session_form_container';
 import CarouselContainer from './events/carousel_container';
@@ -28,6 +29,7 @@ const App = () => (
 
     <Route exact path="/events" component={EventIndexContainer} />
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
+    <Route path="/categories" component={CategoryList} />
     <Route exact path="/categories/:name" component={CategoryEventsContainer} />
 
     <Route path="/" component={Footer} />
