@@ -14,7 +14,8 @@ class EventIndexCarousel extends React.Component {
   }
 
   render() {
-    const { events, deleteEvent } = this.props;
+    let { events, deleteEvent } = this.props;
+    events = events.slice(0,5);
 
     return (
       <div>
