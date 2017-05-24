@@ -1,9 +1,9 @@
-.event-index-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
+// .event-index-container {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-start;
+//   align-items: center;
+// }
 
 .event-index-header {
   display: flex;
@@ -38,8 +38,7 @@
   display: flex;
   justify-content: flex-start;
   margin: 15px 30%;
-  min-width: 500px;
-  max-width: 750px;
+  width: 500px;
   border: 1px solid #c6c6c6;
   border-radius: 10px;
   overflow: hidden;

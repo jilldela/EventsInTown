@@ -2,11 +2,36 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.category-browse-container {
+  display: flex;
+  justify-content: center;
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 89px;
+}
+
 .category-index {
   font-family: 'Raleway', sans-serif;
   max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.category-nav-list {
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30vh;
+}
+
+.category-nav-list ul {
+  list-style-type: none;
+}
+
+.category-nav-list ul li {
+  margin: 10px 0;
 }
 
 .category-index h1 {
@@ -104,10 +129,6 @@
     height: 100%;
     text-shadow: 1px 1px 2px black;
   }
-}
-
-.category-show {
-  margin-top: 100px;
 }
 
 .category-description-overlay {

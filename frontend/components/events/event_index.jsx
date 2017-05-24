@@ -17,8 +17,7 @@ class EventIndex extends React.Component {
     const { events, deleteEvent } = this.props;
 
     return (
-      <div className="event-index-container">
-        <h1 className="event-index-header">Events For You</h1>
+      <div className="category-show">
         <div className="event-index-items">
           {events.map(eventDetail =>
             <EventIndexItem

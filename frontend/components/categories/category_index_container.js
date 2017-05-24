@@ -1,4 +1,4 @@
-
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import CategoryIndex from './category_index';
@@ -13,7 +13,9 @@ const mapDispatchToProps = (dispatch) => ({
   fetchSingleCategory: (id) => dispatch(fetchSingleCategory(id))
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(CategoryIndex);
+export default withRouter(
+  connect(
+    mapStateToProps,
+    mapDispatchToProps
+  )(CategoryIndex)
+);

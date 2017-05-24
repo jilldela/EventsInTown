@@ -10,6 +10,7 @@ class CategoryList extends React.Component {
     return (
       <nav className="category-nav-list">
         <ul>
+          <li><Link to="/categories">All Categories</Link></li>
           <li><Link to="/categories/sports">Sports & Wellness</Link></li>
           <li><Link to="/categories/music">Music</Link></li>
           <li><Link to="/categories/food">Food and Drink</Link></li>

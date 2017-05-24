@@ -12,6 +12,12 @@ class CategoryEvents extends React.Component {
     this.props.fetchSingleCategory(this.props.match.params.name);
   }
 
+  componentWillReceiveProps(newProps){
+    if(newProps.match.params.name !== this.props.match.params.name){
+      this.props.fetchSingleCategory(newProps.match.params.name);
+    }
+  }
+
   render() {
     const category = values(this.props.categories);
     let events = [];

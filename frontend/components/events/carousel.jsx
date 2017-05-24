@@ -35,7 +35,7 @@ class EventIndexCarousel extends React.Component {
 
         </Carousel>
         <span className="see-more-button">
-          <Link to="/events" className="event-index-link">See More</Link>
+          <Link to="/categories" className="event-index-link">See More</Link>
         </span>
       </div>
 
