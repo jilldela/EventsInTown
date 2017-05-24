@@ -11,7 +11,8 @@
 }
 
 .ticket-modal-container:focus,
-.close-modal-button:focus {
+.close-modal-button:focus,
+.ticket-quantity-selector:focus {
   outline-color: transparent;
   outline-style: none;
 }
@@ -24,9 +25,12 @@
 }
 
 .ticket-form {
-  border: 1px solid #c6c6c6;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid #c6c6c6;
+  border-radius: 5px;
+  border-left: 10px solid #077187;
 }
 
 .ticket-details {
@@ -36,5 +40,16 @@
 
 .ticket-details label {
   margin: 5px;
-  text-align: right;
+  text-align: left;
+}
+
+.ticket-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.ticket-quantity-selector {
+  max-width: 100%;
+  width: 80px;
+  height: 30px;
 }

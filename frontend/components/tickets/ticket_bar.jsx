@@ -35,29 +35,29 @@ class TicketBar extends React.Component {
   }
 
   render() {
-      return (
-        <div className="ticket-bar">
-          <img
-            src="https://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
-            alt="bookmark"
-            className="bookmark"/>
-          <button className="ticket-button" onClick={this.modalType}>TICKETS</button>
+    return (
+      <div className="ticket-bar">
+        <img
+          src="https://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
+          alt="bookmark"
+          className="bookmark"/>
+        <button className="ticket-button" onClick={this.modalType}>TICKETS</button>
 
-          <Modal
-            isOpen={this.state.openModal}
-            onRequestClose={this.closeModal}
-            style={ModalStyle}
-            contentLabel="Tickets Modal"
-            className="ticket-modal-container">
+        <Modal
+          isOpen={this.state.openModal}
+          onRequestClose={this.closeModal}
+          style={ModalStyle}
+          contentLabel="Tickets Modal"
+          className="ticket-modal-container">
 
-            <TicketForm
-              closeModal={this.closeModal}
-              eventDetail={this.props.eventDetail}/>
+          <TicketForm
+            closeModal={this.closeModal}
+            eventDetail={this.props.eventDetail}
+            session={this.props.session}/>
 
-          </Modal>
-        </div>
-      );
-
+        </Modal>
+      </div>
+    );
   }
 }
 
