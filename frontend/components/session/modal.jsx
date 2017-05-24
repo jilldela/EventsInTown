@@ -14,6 +14,12 @@ class SessionModal extends React.Component {
       type: props.type
     };
 
+    window.SessionOpenModal = () => {
+      this.setState({openModal: true});
+    };
+
+    window.SessionOpenModal = window.SessionOpenModal.bind(this);
+
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
     this.changetype = this.changetype.bind(this);

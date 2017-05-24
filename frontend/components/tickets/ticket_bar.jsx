@@ -15,7 +15,7 @@ class TicketBar extends React.Component {
 
     this.openModal = this.openModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
-    this.formType = this.formType.bind(this);
+    this.modalType = this.modalType.bind(this);
   }
 
   openModal() {
@@ -26,34 +26,22 @@ class TicketBar extends React.Component {
     this.setState({openModal: false});
   }
 
-  formType() {
+  modalType() {
     if (this.props.loggedIn === false) {
-      return (
-        <SessionForm
-          type="Log In"
-          requestLogIn={this.props.requestLogIn}
-          requestSignUp={this.props.requestSignUp}
-          errors={this.props.errors} />
-      );
+      window.SessionOpenModal();
     } else {
-      return (
-        <TicketForm
-          closeModal={this.closeModal}
-          eventDetail={this.props.eventDetail}/>
-      );
+      this.openModal();
     }
   }
 
   render() {
-    console.log(this.props);
-
-    return (
-      <div className="ticket-bar">
-        <img
-          src="https://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
-          alt="bookmark"
-          className="bookmark"/>
-        <button className="ticket-button" onClick={this.openModal}>TICKETS</button>
+      return (
+        <div className="ticket-bar">
+          <img
+            src="https://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
+            alt="bookmark"
+            className="bookmark"/>
+          <button className="ticket-button" onClick={this.modalType}>TICKETS</button>
 
           <Modal
             isOpen={this.state.openModal}
@@ -62,11 +50,14 @@ class TicketBar extends React.Component {
             contentLabel="Tickets Modal"
             className="ticket-modal-container">
 
-            {this.formType()}
+            <TicketForm
+              closeModal={this.closeModal}
+              eventDetail={this.props.eventDetail}/>
 
           </Modal>
-      </div>
-    );
+        </div>
+      );
+
   }
 }
 
