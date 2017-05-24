@@ -11,8 +11,6 @@ class EventIndexItem extends React.Component {
   render() {
     const { eventDetail } = this.props;
 
-    console.log(eventDetail);
-
     return (
 
         <div className="carousel-cell" >

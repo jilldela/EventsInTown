@@ -104,13 +104,17 @@
     height: 100%;
     text-shadow: 1px 1px 2px black;
   }
+}
 
+.category-show {
+  margin-top: 100px;
 }
 
 .category-description-overlay {
   opacity: 1.0;
   color: white;
   font-size: 18px;
+  text-align: center;
   z-index: 5;
 }
 

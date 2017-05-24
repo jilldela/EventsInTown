@@ -12,10 +12,6 @@ class CategoryEvents extends React.Component {
     this.props.fetchSingleCategory(this.props.match.params.name);
   }
 
-  // componentDidMount() {
-  //   this.props.fetchSingleCategory(this.props.match.params.name);
-  // }
-
   render() {
     const category = values(this.props.categories);
     let events = [];
@@ -33,10 +29,9 @@ class CategoryEvents extends React.Component {
     )) : undefined
 
     return (
-      <div>
-        <div>hello</div>
+      <div className="category-show">
         {displayEvents}
-    </div>
+      </div>
   );
 
   }

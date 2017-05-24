@@ -85,12 +85,11 @@
 .cell-image {
   height: auto;
   width: 300px;
-  opacity: 0.5;
   transition: 1s;
 }
 
 .cell-image:hover {
-  opacity: 1.0;
+  opacity: 0.5;
   transition: 1s;
 }
 

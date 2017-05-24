@@ -20,6 +20,18 @@ ethan = User.create(username: 'Ethan', password: 'password')
 gavin = User.create(username: 'Gavin', password: 'password')
 
 Event.destroy_all
+e20 = Event.create(
+organizer_id: eric.id,
+title: 'Travel Photography Class',
+location: 'Fort Mason, San Francisco, CA',
+date: Date.new(2017, 11, 22),
+time: DateTime.new(2017, 11, 22, 7, 0, 0),
+description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
+image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495488685/photo-1489156703850-ff36f4ed2465_lw2xbw.jpg',
+ticket_price: 20,
+ticket_quantity: 100
+)
+
 e4 = Event.create(
 organizer_id: eric.id,
 title: 'Paint Brushes Going Up!',
@@ -249,17 +261,6 @@ e19 = Event.create(
   ticket_quantity: 100
 )
 
-e20 = Event.create(
-  organizer_id: eric.id,
-  title: 'Travel Photography Class',
-  location: 'Fort Mason, San Francisco, CA',
-  date: Date.new(2017, 11, 22),
-  time: DateTime.new(2017, 11, 22, 7, 0, 0),
-  description: 'Learn how to capture great images for your next vacation. We will teach you how to capture magical moments on your next vacation. Learn about inexpensive and essential equipment and tools, how to work with complex cultural issues in the field, lighting/exposure tips and time-of-day solutions, and composition and balance in image design.',
-  image: 'http://res.cloudinary.com/db08acmvn/image/upload/v1495488685/photo-1489156703850-ff36f4ed2465_lw2xbw.jpg',
-  ticket_price: 20,
-  ticket_quantity: 100
-)
 
 
 
