@@ -20,6 +20,6 @@ module.exports = {
     borderRadius    : '5px',
     padding         : '10px',
     backgroundColor : 'white',
-    zIndex          : 11
+    zIndex          : 101
   },
 };
