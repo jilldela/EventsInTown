@@ -26,6 +26,7 @@ class TicketForm extends React.Component {
 
   render() {
     const { quantity } = this.state;
+    const { eventDetail } = this.props;
 
     return (
       <div className="ticket-box">
@@ -40,20 +41,24 @@ class TicketForm extends React.Component {
         <form
           className="ticket-form">
           <ul className="ticket-details">
-            <label className="ticket-title">{this.props.eventDetail.title}</label>
-            <label>${this.props.eventDetail.ticket_price}</label>
+            <label className="ticket-title">{eventDetail.title}</label>
+            <label>${eventDetail.ticket_price}</label>
           </ul>
-          <select className="ticket-quantity-selector">
-            <option onChange={this.handleChange} value={1}>1</option>
-            <option onChange={this.handleChange} value={2}>2</option>
-            <option onChange={this.handleChange} value={3}>3</option>
-            <option onChange={this.handleChange} value={4}>4</option>
-            <option onChange={this.handleChange} value={5}>5</option>
-            <option onChange={this.handleChange} value={6}>6</option>
+          <select className="ticket-quantity-selector" onChange={this.handleChange}>
+            <option disabled selected>0</option>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+            <option value={5}>5</option>
+            <option value={6}>6</option>
           </select>
         </form>
-
-        <button className="submit-button ticket-checkout-button" onClick={this.handleSubmit}>CHECKOUT</button>
+        <footer className="ticket-form-footer">
+          <label>QTY: {quantity}</label>
+          <label>TOTAL: ${eventDetail.ticket_price * quantity}</label>
+          <button className="submit-button ticket-checkout-button" onClick={this.handleSubmit}>CHECKOUT</button>
+        </footer>
       </div>
     );
   }
