@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 
 import moment from 'moment';
 
+import BookmarkContainer from '../bookmarks/bookmark_container';
+
 class EventIndexItem extends React.Component {
   constructor(props) {
     super(props);
@@ -10,7 +12,7 @@ class EventIndexItem extends React.Component {
 
   render() {
     const { eventDetail } = this.props;
-
+    console.log(this.props);
     return (
 
         <div className="carousel-cell" >
@@ -32,11 +34,12 @@ class EventIndexItem extends React.Component {
                       </li>
                     )}
                   </ul>
-                  <i className="fa fa-bookmark-o" aria-hidden="true"></i>
               </ul>
             </ul>
           </Link>
-
+          <BookmarkContainer
+            className="event-detail-bookmark"
+            eventDetail={eventDetail}/>
         </div>
 
     );

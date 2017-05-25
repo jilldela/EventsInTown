@@ -23,12 +23,3 @@ document.addEventListener("DOMContentLoaded", () => {
   Modal.setAppElement(document.body);
   ReactDOM.render(<Root store={ store } />, root);
 });
-
-
-
-// TODO: for testing only!
-import * as Action from './actions/bookmark_actions';
-import * as APIUtil from './util/bookmark_api_util';
-
-window.createBookmark = Action.createBookmark;
-window.deleteBookmark = APIUtil.deleteBookmark;

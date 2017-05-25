@@ -5,10 +5,11 @@ import Bookmark from './bookmark';
 import { fetchUser } from '../../actions/user_actions';
 import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
 
-const mapStateToProps = ({ session, user }) => ({
+const mapStateToProps = ({ session, user }, ownProps) => ({
   currentUser: session.currentUser,
   loggedIn: Boolean(session.currentUser),
-  user: ( user || { bookmarks: [] })
+  user: ( user || { bookmarks: [] }),
+  eventDetail: ownProps.eventDetail
 });
 
 const mapDispatchToProps = (dispatch) => ({
