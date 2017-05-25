@@ -17,7 +17,14 @@ class UserPage extends React.Component {
   }
 
   componentDidMount() {
+    this.props.fetchUser(this.props.currentUser.id);
     window.scrollTo(0,0);
+  }
+
+  componentWillReceiveProps(newProps) {
+    if(newProps.location.pathname !== this.props.location.pathname){
+      this.props.fetchUser(this.props.currentUser.id);
+    }
   }
 
   renderComponent() {

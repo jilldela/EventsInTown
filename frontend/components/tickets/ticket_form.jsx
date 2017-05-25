@@ -24,7 +24,7 @@ class TicketForm extends React.Component {
     this.props.createTicket(this.state)
       .then(() => {
         this.props.closeModal();
-        this.props.history.push(`/users/${this.props.session.currentUser.id}`);
+        this.props.history.push(`/users/${this.props.session.currentUser.id}/tickets`);
       }
     );
   }
