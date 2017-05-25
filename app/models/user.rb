@@ -10,10 +10,16 @@ class User < ApplicationRecord
   has_many :ticket_events,
     through: :tickets, #registered events
     source: :event
+    
   has_many :events,
     primary_key: :id,
     foreign_key: :organizer_id,
     class_name: :Event
+
+  has_many :bookmark_events,
+    through: :bookmarks,
+    source: :event
+
   has_many :bookmarks #saved events
   has_many :tickets #registration
 

@@ -7,3 +7,7 @@ end
 json.hosted @user.events do |event|
   json.partial! 'api/events/event', event: event
 end
+
+json.bookmarks @user.bookmark_events do |event|
+  json.partial! 'api/events/event', event: event
+end
