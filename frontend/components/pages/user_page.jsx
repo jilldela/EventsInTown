@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, withRouter } from 'react-router-dom';
 
 import EventIndexItem from '../events/event_index_item';
 import UserHeader from '../user/user_header';
@@ -7,7 +8,8 @@ class UserPage extends React.Component {
   constructor(props) {
     super(props);
 
-    this.userTickets = this.userTickets.bind(this);
+    this.userEvents = this.userEvents.bind(this);
+    this.renderComponent = this.renderComponent.bind(this);
   }
 
   componentWillMount() {
@@ -18,8 +20,18 @@ class UserPage extends React.Component {
     window.scrollTo(0,0);
   }
 
-  userTickets() {
-    const events = this.props.user.events;
+  renderComponent() {
+    const { id } = this.props.currentUser;
+    const { pathname } = this.props.location;
+
+    if (pathname === `/users/${id}/tickets`) {
+      return this.props.userTickets;
+    }
+  }
+
+  userEvents() {
+    console.log(this.props);
+    const events = this.renderComponent();
 
     if (events) {
       return (
@@ -38,17 +50,16 @@ class UserPage extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     const { currentUser } = this.props;
 
     return (
       <div className="user-page-container">
         <UserHeader currentUser={currentUser} />
-        {this.userTickets}
+        {this.userEvents()}
       </div>
     );
 
   }
 }
 
-export default UserPage;
+export default withRouter(UserPage);

@@ -5,7 +5,7 @@ import { fetchUser } from '../../actions/user_actions';
 
 const mapStateToProps = ({ session, errors, user }) => ({
   currentUser: session.currentUser,
-  user: (user || {events: []}),
+  userTickets: ( user.tickets || [] ),
   errors
 });
 

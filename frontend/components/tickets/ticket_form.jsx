@@ -4,8 +4,6 @@ class TicketForm extends React.Component {
   constructor(props) {
     super(props);
 
-    console.log(props);
-
     this.state = {
       event_id: props.eventDetail.id,
       user_id: props.session.currentUser.id,
