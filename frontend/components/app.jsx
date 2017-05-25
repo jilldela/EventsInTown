@@ -11,6 +11,7 @@ import SessionFormContainer from './session/session_form_container';
 import CarouselContainer from './events/carousel_container';
 import EventDetailContainer from './events/event_detail_container';
 import CategoryIndexContainer from './categories/category_index_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div className="app">
@@ -32,7 +33,7 @@ const App = () => (
 
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
 
-    <Route path="/users/:id" component={UserContainer} />
+    <ProtectedRoute path="/users/:id" component={UserContainer} />
 
     <Route path="/" component={Footer} />
   </div>

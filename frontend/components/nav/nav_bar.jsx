@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 
 import SessionFormContainer from '../session/session_form_container';
 import EventFormContainer from '../events/event_form_container';
@@ -21,7 +21,8 @@ class NavBar extends React.Component {
   }
 
   handleLogOut() {
-    this.props.requestLogOut();
+    this.props.requestLogOut()
+      .then(this.props.history.push(`/`));
   }
 
   render() {
@@ -67,4 +68,4 @@ class NavBar extends React.Component {
   }
 }
 
-export default NavBar;
+export default withRouter(NavBar);

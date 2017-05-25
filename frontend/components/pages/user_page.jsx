@@ -37,7 +37,6 @@ class UserPage extends React.Component {
   }
 
   userEvents() {
-    console.log(this.props);
     const events = this.renderComponent();
 
     if (events) {
