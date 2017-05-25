@@ -32,7 +32,7 @@ const App = () => (
 
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
 
-    <Route exact path="/users/:id" component={UserContainer} />
+    <Route path="/users/:id" component={UserContainer} />
 
     <Route path="/" component={Footer} />
   </div>

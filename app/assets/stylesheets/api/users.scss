@@ -1,3 +1,26 @@
 // Place all the styles related to the api/users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-nav-container {
+  font-family: 'Raleway', sans-serif;
+  color: #077187;
+  margin-top: 100px;
+}
+
+.user-page-header {
+  font-size: 64px;
+  display: flex;
+  justify-content: center;
+}
+
+.user-links ul {
+  list-style-type: none;
+  font-size: 24px;
+  color: #077187;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  border-top: 2px solid #c6c6c6;
+  border-bottom: 2px solid #c6c6c6;
+}

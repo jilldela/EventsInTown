@@ -33,7 +33,12 @@ class NavBar extends React.Component {
           <ul>
             <li><Link to="/categories" className="login-links">Browse Events</Link></li>
             <li><EventFormContainer type="Create An Event"/></li>
-            <li><Link to={`/users/${currentUser.id}`} className="login-links">{currentUser.username}</Link></li>
+            <li>
+              <Link to={`/users/${currentUser.id}`} className="login-links">
+                <i className="fa fa-user-circle-o" aria-hidden="true"></i>
+                {currentUser.username}
+              </Link>
+            </li>
             <li><button className="session-button" onClick={this.handleLogOut}>
               Log Out
             </button></li>
