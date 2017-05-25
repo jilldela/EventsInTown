@@ -1,3 +1,17 @@
 // Place all the styles related to the api/bookmarks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.bookmark:hover {
+  text-shadow: #CCC 1px 0 10px;
+}
+
+.selected {
+  font-size: 32px;
+  color: red;
+}
+
+.unselected {
+  font-size: 32px;
+  color: red;
+}

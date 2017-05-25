@@ -2,6 +2,7 @@ import React from 'react';
 import Modal from 'react-modal';
 import { withRouter } from 'react-router-dom';
 
+import BookmarkContainer from '../bookmarks/bookmark_container';
 import TicketForm from './ticket_form';
 import SessionForm from '../session/session_form';
 import ModalStyle from './modal_style';
@@ -38,10 +39,7 @@ class TicketBar extends React.Component {
   render() {
     return (
       <div className="ticket-bar">
-        <img
-          src="https://res.cloudinary.com/db08acmvn/image/upload/v1495225777/bookmark_kdhxda.png"
-          alt="bookmark"
-          className="bookmark"/>
+        <BookmarkContainer />
         <button className="ticket-button" onClick={this.modalType}>TICKETS</button>
 
         <Modal
