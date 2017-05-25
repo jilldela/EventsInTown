@@ -10,3 +10,7 @@ export const receiveBookmark = (bookmark) =>({
 export const createBookmark = (bookmark) => (dispatch) => (
   APIUtil.createBookmark(bookmark)
 );
+
+export const deleteBookmark = (id) => (dispatch) => (
+  APIUtil.deleteBookmark(id)
+);

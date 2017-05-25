@@ -28,5 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // TODO: for testing only!
 import * as Action from './actions/bookmark_actions';
+import * as APIUtil from './util/bookmark_api_util';
 
 window.createBookmark = Action.createBookmark;
+window.deleteBookmark = APIUtil.deleteBookmark;

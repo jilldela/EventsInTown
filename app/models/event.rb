@@ -9,6 +9,7 @@ class Event < ApplicationRecord
 
   has_many :event_categories
   has_many :tickets
+  has_many :bookmarks
 
   has_many :categories,
     through: :event_categories,
