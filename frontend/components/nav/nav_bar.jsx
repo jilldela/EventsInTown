@@ -17,7 +17,7 @@ class NavBar extends React.Component {
   }
 
   handleLogIn() {
-    this.props.requestLogIn({username: 'guest', password: 'password'});
+    this.props.requestLogIn({username: 'Jill', password: 'password'});
   }
 
   handleLogOut() {
@@ -46,7 +46,7 @@ class NavBar extends React.Component {
           <ul>
             <li>
               <button className="session-button" onClick={this.handleLogIn}>
-                Guest Log In
+                Demo
               </button>
             </li>
             <li>

@@ -7,7 +7,8 @@ class User < ApplicationRecord
 
   attr_reader :password
 
-  has_many :events #hosted events
+  has_many :events,
+    through: :tickets
   has_many :bookmarks #saved events
   has_many :tickets #registered events
 

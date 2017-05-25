@@ -6,6 +6,7 @@ import HeroImage from './home/hero';
 import EventBrowse from './pages/event_browse';
 import CategoryBrowse from './pages/category_browse';
 import NavBarContainer from './nav/nav_bar_container';
+import UserContainer from './user/user_container';
 import SessionFormContainer from './session/session_form_container';
 import CarouselContainer from './events/carousel_container';
 import EventDetailContainer from './events/event_detail_container';
@@ -31,6 +32,7 @@ const App = () => (
 
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
 
+    <Route exact path="/users/:id" component={UserContainer} />
 
     <Route path="/" component={Footer} />
   </div>
