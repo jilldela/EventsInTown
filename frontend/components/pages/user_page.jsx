@@ -30,8 +30,6 @@ class UserPage extends React.Component {
   renderComponent() {
     const { id } = this.props.currentUser;
     const { pathname } = this.props.location;
-    console.log(this.props);
-    console.log(pathname);
 
     if (pathname === `/users/${id}/tickets`) {
       return this.props.userTickets;
@@ -44,7 +42,6 @@ class UserPage extends React.Component {
 
   userEvents() {
     const events = this.renderComponent();
-    console.log(events);
 
     if (events) {
       return (
