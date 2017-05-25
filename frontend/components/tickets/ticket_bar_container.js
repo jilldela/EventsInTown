@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import TicketBar from './ticket_bar';
-import { requestLogIn, requestSignUp, clearErrors } from '../../actions/session_actions';
+import { createTicket } from '../../actions/ticket_actions';
 
 const mapStateToProps = ({ session, eventDetail, errors }) => ({
   loggedIn: Boolean(session.currentUser),
@@ -9,7 +9,7 @@ const mapStateToProps = ({ session, eventDetail, errors }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  
+  createTicket: ticket => dispatch(createTicket(ticket))
 });
 
 export default connect(

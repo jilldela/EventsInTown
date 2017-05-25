@@ -1,5 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
+import { withRouter } from 'react-router-dom';
 
 import TicketForm from './ticket_form';
 import SessionForm from '../session/session_form';
@@ -35,6 +36,7 @@ class TicketBar extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="ticket-bar">
         <img
@@ -53,7 +55,9 @@ class TicketBar extends React.Component {
           <TicketForm
             closeModal={this.closeModal}
             eventDetail={this.props.eventDetail}
-            session={this.props.session}/>
+            createTicket={this.props.createTicket}
+            session={this.props.session}
+            history={this.props.history}/>
 
         </Modal>
       </div>
@@ -61,4 +65,4 @@ class TicketBar extends React.Component {
   }
 }
 
-export default TicketBar;
+export default withRouter(TicketBar);

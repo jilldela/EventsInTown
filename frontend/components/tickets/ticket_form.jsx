@@ -4,6 +4,8 @@ class TicketForm extends React.Component {
   constructor(props) {
     super(props);
 
+    console.log(props);
+
     this.state = {
       event_id: props.eventDetail.id,
       user_id: props.session.currentUser.id,
@@ -16,12 +18,17 @@ class TicketForm extends React.Component {
 
   handleChange(e) {
     e.preventDefault();
-    this.setState({ quantity: e.currentTarget.value });
+    this.setState({ quantity: parseInt(e.currentTarget.value) });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-
+    this.props.createTicket(this.state)
+      .then(() => {
+        this.props.closeModal();
+        this.props.history.push(`/users/${this.props.session.currentUser.id}`);
+      }
+    );
   }
 
   render() {
@@ -39,26 +46,27 @@ class TicketForm extends React.Component {
         </header>
 
         <form
+          onSubmit={this.handleSubmit}
           className="ticket-form">
           <ul className="ticket-details">
             <label className="ticket-title">{eventDetail.title}</label>
             <label>${eventDetail.ticket_price}</label>
+            <select className="ticket-quantity-selector" onChange={this.handleChange}>
+              <option disabled selected>0</option>
+              <option value={1}>1</option>
+              <option value={2}>2</option>
+              <option value={3}>3</option>
+              <option value={4}>4</option>
+              <option value={5}>5</option>
+              <option value={6}>6</option>
+            </select>
           </ul>
-          <select className="ticket-quantity-selector" onChange={this.handleChange}>
-            <option disabled selected>0</option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-            <option value={6}>6</option>
-          </select>
+          <footer className="ticket-footer">
+            <label>QTY: {quantity}</label>
+            <label>TOTAL: ${eventDetail.ticket_price * quantity}</label>
+            <button className="submit-button ticket-checkout-button">CHECKOUT</button>
+          </footer>
         </form>
-        <footer className="ticket-form-footer">
-          <label>QTY: {quantity}</label>
-          <label>TOTAL: ${eventDetail.ticket_price * quantity}</label>
-          <button className="submit-button ticket-checkout-button" onClick={this.handleSubmit}>CHECKOUT</button>
-        </footer>
       </div>
     );
   }
