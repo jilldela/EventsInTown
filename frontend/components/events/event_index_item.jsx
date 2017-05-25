@@ -32,6 +32,7 @@ class EventIndexItem extends React.Component {
                       </li>
                     )}
                   </ul>
+                  <i class="fa fa-bookmark-o" aria-hidden="true"></i>
               </ul>
             </ul>
           </Link>

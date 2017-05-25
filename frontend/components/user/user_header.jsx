@@ -17,8 +17,9 @@ class UserHeader extends React.Component {
         </header>
         <nav className="user-links">
           <ul>
-            <li><Link to={`/users/${currentUser.id}/bookmarks`}>Bookmarks</Link></li>
-            <li><Link to={`/users/${currentUser.id}/tickets`}>Tickets</Link></li>
+            <li><Link to={`/users/${currentUser.id}/bookmarks`}>Your Bookmarks</Link></li>
+            <li><Link to={`/users/${currentUser.id}/events`}>Hosted Events By You</Link></li>
+            <li><Link to={`/users/${currentUser.id}/tickets`}>Your Tickets</Link></li>
           </ul>
         </nav>
       </div>

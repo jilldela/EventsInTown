@@ -24,3 +24,12 @@
   border-top: 2px solid #c6c6c6;
   border-bottom: 2px solid #c6c6c6;
 }
+
+.user-links ul li a:link,
+.user-links ul li a:visited {
+  color: #077187;
+}
+
+.user-links ul li a:hover {
+  text-transform: uppercase;
+}

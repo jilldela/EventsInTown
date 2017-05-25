@@ -33,6 +33,8 @@ class UserPage extends React.Component {
 
     if (pathname === `/users/${id}/tickets`) {
       return this.props.userTickets;
+    } else if (pathname === `/users/${id}/events`) {
+      return this.props.userHosted;
     }
   }
 
