@@ -53,13 +53,19 @@
   margin: 20px 0!important;
 }
 
-
 .event-thumbnail-details {
   display: flex;
   flex-direction: column;
   text-decoration: none;
   list-style-type: none;
   font-family: 'Raleway', sans-serif;
+  height: 100%;
+}
+
+.event-thumbnail-details ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .event-thumbnail-details li {

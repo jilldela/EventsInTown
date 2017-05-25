@@ -23,6 +23,8 @@
   justify-content: space-between;
   align-items: center;
   height: 30vh;
+  margin-top: 75px;
+  position: fixed;
 }
 
 .category-nav-list ul {
@@ -45,6 +47,10 @@
 .category-nav-list ul li a:hover {
   transition: 0.3s;
   font-weight: bold;
+}
+
+.category-show {
+  margin-left: 50px;
 }
 
 .category-index h1 {

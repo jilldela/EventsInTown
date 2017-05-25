@@ -20,13 +20,19 @@ class EventIndexItem extends React.Component {
                   className="cell-image"
                   src={`${eventDetail.image}`}
                   alt={`${eventDetail.title}`}/>
-              <uL className="event-thumbnail-details">
-                <li>{eventDetail.title}</li>
-                <li>{moment(eventDetail.date).format('MMMM Do YYYY')}</li>
-                <li>{eventDetail.location}</li>
-                <li>{eventDetail.categories.map(category => `${category.name}. `)}</li>
-                <li>${eventDetail.ticket_price}</li>
-              </uL>
+                <ul className="event-thumbnail-details">
+                  <li>{eventDetail.title}</li>
+                  <li>{moment(eventDetail.date).format('MMMM Do YYYY')}</li>
+                  <li>{eventDetail.location}</li>
+                  <li>${eventDetail.ticket_price}</li>
+                  <ul className="categories-tag-list">
+                    {eventDetail.categories.map(category =>
+                      <li key={`${category.name}-${category.id}`}>
+                        {`#${category.name} `}
+                      </li>
+                    )}
+                  </ul>
+              </ul>
             </ul>
           </Link>
 
