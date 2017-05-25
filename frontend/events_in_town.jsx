@@ -27,6 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // TODO: for testing only!
-import * as APIUtil from './util/ticket_api_util';
+import * as APIUtil from './util/bookmark_api_util';
 
-window.createTicket = APIUtil.createTicket;
+window.createBookmark = APIUtil.createBookmark;
