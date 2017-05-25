@@ -7,8 +7,13 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :ticket_events,
+    through: :tickets, #registered events
+    source: :event
   has_many :events,
-    through: :tickets #registered events
+    primary_key: :id,
+    foreign_key: :organizer_id,
+    class_name: :Event
   has_many :bookmarks #saved events
   has_many :tickets #registration
 
