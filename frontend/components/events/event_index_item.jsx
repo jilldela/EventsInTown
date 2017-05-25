@@ -12,9 +12,8 @@ class EventIndexItem extends React.Component {
 
   render() {
     const { eventDetail } = this.props;
-    console.log(this.props);
-    return (
 
+    return (
         <div className="carousel-cell" >
           <Link to={`/events/${eventDetail.id}`} className="thumbnail">
             <ul className="event-box">
@@ -41,7 +40,6 @@ class EventIndexItem extends React.Component {
             className="event-detail-bookmark"
             eventDetail={eventDetail}/>
         </div>
-
     );
   }
 }

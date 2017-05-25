@@ -6,7 +6,7 @@ class Bookmark extends React.Component {
     super(props);
 
     this.state = {
-      event_id: props.eventDetail.id,
+      event_id: (parseInt(props.match.params.eventId) || props.eventDetail.id),
       selected: false
     };
 
