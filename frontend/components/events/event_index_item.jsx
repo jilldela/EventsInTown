@@ -8,8 +8,6 @@ import BookmarkContainer from '../bookmarks/bookmark_container';
 class EventIndexItem extends React.Component {
   constructor(props) {
     super(props);
-
-    this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick() {
@@ -22,7 +20,6 @@ class EventIndexItem extends React.Component {
         <div className="carousel-cell" >
           <Link
             to={`/events/${eventDetail.id}`}
-            onClick={this.handleClick}
             className="thumbnail">
             <ul className="event-box">
                 <img
