@@ -316,7 +316,7 @@ ec20b = EventCategory.create(event_id: e20.id, category_id: networking.id)
 
 Ticket.destroy_all
 t1 = Ticket.create(event_id: e20.id, user_id: jill.id)
-t2 = Ticket.create(event_id: e9.id, user_id: jill.id)
+t2 = Ticket.create(event_id: e12.id, user_id: jill.id)
 t3 = Ticket.create(event_id: e14.id, user_id: jill.id)
 
 Bookmark.destroy_all
