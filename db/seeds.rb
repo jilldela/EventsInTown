@@ -7,7 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 User.destroy_all
-guest = User.create(username: 'Guest', password: 'password')
 jill = User.create(username: 'Jill', password: 'password')
 john = User.create(username: 'John', password: 'password')
 jack = User.create(username: 'Jack', password: 'password')
@@ -57,7 +56,7 @@ ticket_quantity: 300
 )
 
 e9 = Event.create(
-organizer_id: guest.id,
+organizer_id: john.id,
 title: 'Warriors vs Cavaliers',
 location: 'Oakland, CA',
 date: Date.new(2018,5,25),
@@ -69,7 +68,7 @@ ticket_quantity: 300
 )
 
 e5 = Event.create(
-    organizer_id: rina.id,
+    organizer_id: jill.id,
     title: 'Photography Walk',
     location: 'San Francisco, CA',
     date: Date.new(2018,9,22),
@@ -81,7 +80,7 @@ e5 = Event.create(
   )
 
 e6 = Event.create(
-    organizer_id: alaina.id,
+    organizer_id: jill.id,
     title: 'Yoga in the City',
     location: 'San Francisco, CA',
     date: Date.new(2018,10,25),
@@ -117,7 +116,7 @@ e8 = Event.create(
   )
 
   e2 = Event.create(
-  organizer_id: jill.id,
+  organizer_id: rina.id,
   title: 'Island Reggae',
   location: 'Santa Clara, CA',
   date: Date.new(2017, 7, 8),
@@ -129,7 +128,7 @@ e8 = Event.create(
   )
 
   e1 = Event.create(
-  organizer_id: guest.id,
+  organizer_id: john.id,
   title: 'Tahiti Fete',
   location: 'San Jose, CA',
   date: Date.new(2018, 7, 4),
@@ -154,7 +153,7 @@ e8 = Event.create(
 
 
 e10 = Event.create(
-    organizer_id: jill.id,
+    organizer_id: cheryl.id,
     title: 'Kehlani',
     location: 'Greek Theatre, UC Berkeley',
     date: Date.new(2018,6,23),
@@ -238,7 +237,7 @@ e17 = Event.create(
 )
 
 e18 = Event.create(
-  organizer_id: guest.id,
+  organizer_id: john.id,
   title: 'SF Giants  vs. LA Dodgers',
   location: 'AT&T Park, San Francisco, CA',
   date: Date.new(2018, 1, 16),
@@ -250,7 +249,7 @@ e18 = Event.create(
 )
 
 e19 = Event.create(
-  organizer_id: guest.id,
+  organizer_id: john.id,
   title: 'Off the Grid',
   location: 'Fort Mason, San Francisco, CA',
   date: Date.new(2018, 4, 22),
@@ -321,4 +320,5 @@ t2 = Ticket.create(event_id: e9.id, user_id: jill.id)
 t3 = Ticket.create(event_id: e14.id, user_id: jill.id)
 
 Bookmark.destroy_all
-b1 = Bookmark.create(event_id: e18.id, user_id: jill.id)
+b1 = Bookmark.create(event_id: e9.id, user_id: jill.id)
+b2 = Bookmark.create(event_id: e18.id, user_id: jill.id)

@@ -51,7 +51,7 @@
 }
 
 .slider-frame {
-  min-height: 315px!important;
+  min-height: 350px!important;
   margin: 20px 0!important;
 }
 
@@ -88,7 +88,7 @@
 
 
 .thumbnail-image {
-  // background: linear-gradient(to bottom right,#002f4b,#dc4225); //gradient over image
+  background: linear-gradient(to bottom right,#002f4b,#dc4225); //gradient over image
 }
 
 .thumbnail {
@@ -103,7 +103,7 @@
 }
 
 .cell-image:hover {
-  opacity: 0.5;
+  opacity: 0.8;
   transition: 1s;
 }
 
