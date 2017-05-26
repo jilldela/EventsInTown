@@ -122,7 +122,7 @@ e8 = Event.create(
   date: Date.new(2017, 7, 8),
   time: DateTime.new(2017, 7, 8, 11, 0, 0),
   description: '1-Day music & entertainment celebration of Island Reggae culture and lifestyle.',
-  image: 'https://static.wixstatic.com/media/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.jpg/v1/fill/w_773,h_762,al_c,q_85,usm_0.66_1.00_0.01/9ba3d9_2d8fbeed4ce44e2eb3e27286be05b636~mv2_d_1500_1500_s_2.webp',
+  image: 'https://res.cloudinary.com/db08acmvn/image/upload/v1495822776/9ba3d9_d6e632b66f494c7d81e0be453f10c40f_mv2_x1fa34.png',
   ticket_price: 60,
   ticket_quantity: 1000
   )
