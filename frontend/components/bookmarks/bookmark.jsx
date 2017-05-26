@@ -32,7 +32,8 @@ class Bookmark extends React.Component {
         this.props.deleteBookmark(this.props.eventDetail.id);
       } else {
         const bookmark = { event_id: this.props.eventDetail.id };
-        this.props.createBookmark(bookmark);
+        this.props.createBookmark(bookmark)
+          .then(data => console.log(data));
       }
     }
   }
