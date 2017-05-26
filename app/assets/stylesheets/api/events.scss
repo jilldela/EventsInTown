@@ -29,13 +29,15 @@
 
 .event-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   list-style-type: none;
+  border-bottom: 1px solid #c6c6c6;
 }
 
 .carousel-cell {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   margin: 15px 30%;
   width: 50vw;
@@ -61,6 +63,7 @@
   font-family: 'Raleway', sans-serif;
   max-width: 250px;
   height: 100%;
+  margin-left: 20px;
 }
 
 .event-thumbnail-details ul {
@@ -86,6 +89,11 @@
 
 .thumbnail-image {
   // background: linear-gradient(to bottom right,#002f4b,#dc4225); //gradient over image
+}
+
+.thumbnail {
+  display: flex;
+  flex-direction: column;
 }
 
 .cell-image {
@@ -125,6 +133,15 @@
 }
 
 .categories-tag-list {
+  font-family: 'Raleway', sans-serif;
+  color: #6b6868;
+  list-style-type: none;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.categories-tag-list li {
+  margin: 0 10px;
 }

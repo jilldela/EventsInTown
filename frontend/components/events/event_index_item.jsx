@@ -31,19 +31,19 @@ class EventIndexItem extends React.Component {
                   <li>{moment(eventDetail.date).format('MMMM Do YYYY')}</li>
                   <li>{eventDetail.location}</li>
                   <li>${eventDetail.ticket_price}</li>
-                  <ul className="categories-tag-list">
-                    {eventDetail.categories.map(category =>
-                      <li key={`${category.name}-${category.id}`}>
-                        {`#${category.name} `}
-                      </li>
-                    )}
-                  </ul>
               </ul>
             </ul>
           </Link>
-          <BookmarkContainer
-            className="event-detail-bookmark"
-            eventDetail={eventDetail}/>
+          <ul className="categories-tag-list">
+            {eventDetail.categories.map(category =>
+              <li key={`${category.name}-${category.id}`}>
+                {`#${category.name} `}
+              </li>
+            )}
+            <li><BookmarkContainer
+              className="event-detail-bookmark"
+              eventDetail={eventDetail}/></li>
+          </ul>
         </div>
     );
   }

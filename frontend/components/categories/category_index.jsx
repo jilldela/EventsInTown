@@ -52,7 +52,7 @@ class CategoryIndex extends React.Component {
             <Link to="/categories/food" className="category-link">
               <div className="category-pic-food">
                 <div className="category-hover-content">
-                  <div className="category-title">Food and Drinks</div>
+                  <div className="category-title">Food & Drinks</div>
                   <span className="category-description-overlay">
                     Dinner parties, tastings, and big-time festivals
                   </span>
@@ -106,7 +106,7 @@ class CategoryIndex extends React.Component {
                 <div className="category-hover-content">
                   <div className="category-title">Family</div>
                   <span className="category-description-overlay">
-                    Movie nights, festivals, and kid races
+                    Movie nights, festivals, and children's activities
                   </span>
                 </div>
               </div>
