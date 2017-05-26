@@ -31,6 +31,9 @@ Users are able to register or purchase tickets for an event through the event de
 
 ![](docs/screenshots/EventsInTown_TicketModal.png)
 
+### Bookmarks
+Users can bookmark events by click the bookmark icon. If users are not signed in, the bookmark opens the modal to allow users to sign up or log in. The functionality of the bookmark icon toggles between selected and unselected, filling in the bookmark if the user chooses to bookmark the event. The event is added to the user's bookmarked events, which they can view on his/her profile page. This is all handled through a `bookmark` join table connecting the `event_id` and the `user_id`.
+
 ### User's Events
 User's Events Code Snippet:
 
@@ -67,9 +70,6 @@ User's Events Code Snippet:
 
 ```
 The user can host, bookmark, or register/purchase tickets to events. The user state holds arrays of events. The definition of variable `events` changes, as shown in the snippet above, and renders the different `EventIndexItem` components based on the slice of state.
-
-### Bookmarks
-Users can bookmark events by click the bookmark icon. If users are not signed in, the bookmark opens the modal to allow users to sign up or log in. The functionality of the bookmark icon toggles between selected and unselected, filling in the bookmark if the user chooses to bookmark the event. The event is added to the user's bookmarked events, which they can view on his/her profile page. This is all handled through a `bookmark` join table connecting the `event_id` and the `user_id`. 
 
 ## Future Updates
 
