@@ -8,14 +8,22 @@ import BookmarkContainer from '../bookmarks/bookmark_container';
 class EventIndexItem extends React.Component {
   constructor(props) {
     super(props);
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.props.fetchSingleEvent(this.props.eventDetail.id);
   }
 
   render() {
     const { eventDetail } = this.props;
-
     return (
         <div className="carousel-cell" >
-          <Link to={`/events/${eventDetail.id}`} className="thumbnail">
+          <Link
+            to={`/events/${eventDetail.id}`}
+            onClick={this.handleClick}
+            className="thumbnail">
             <ul className="event-box">
                 <img
                   className="cell-image"

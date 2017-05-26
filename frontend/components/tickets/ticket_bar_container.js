@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import TicketBar from './ticket_bar';
 import { createTicket } from '../../actions/ticket_actions';
 
-const mapStateToProps = ({ session, eventDetail, errors }) => ({
+const mapStateToProps = ({ session, eventDetail, errors }, ownProps) => ({
   loggedIn: Boolean(session.currentUser),
-  session, eventDetail, errors
+  session, errors,
+  eventDetail: ownProps.eventDetail
 });
 
 const mapDispatchToProps = (dispatch) => ({

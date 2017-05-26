@@ -5,42 +5,15 @@ class Bookmark extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      event_id: (parseInt(props.match.params.eventId) || props.eventDetail.id),
-      selected: false
-    };
-
     this.bookmarkIcon = this.bookmarkIcon.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  componentWillMount() {
-    const { bookmarks } = this.props.user;
-    const { event_id } = this.state;
-
-    let selected;
-
-    if (bookmarks) {
-      selected = bookmarks.filter( bookmark => (
-        parseInt(event_id) === bookmark.id
-      ));
-    }
-
-    if ( selected && selected.length >= 1 ) {
-      this.setState({ selected: true });
-    } else {
-      this.setState({ selected: false});
-    }
-  }
-
-  componentDidMount() {
-    if (this.props.currentUser) {
-      this.props.fetchUser(this.props.currentUser.id);
-    }
+  componentWillReceiveProps(newProps) {
   }
 
   bookmarkIcon() {
-    if ( this.state.selected === true ) {
+    if ( this.props.eventDetail.bookmarked) {
       return (
         <i className="fa fa-bookmark selected" aria-hidden="true"></i>
       );
@@ -55,17 +28,11 @@ class Bookmark extends React.Component {
     if (this.props.loggedIn === false) {
       window.SessionOpenModal();
     } else {
-
-      if (this.state.selected) {
-        this.props.deleteBookmark(this.state.event_id)
-          .then(this.setState({ selected: false }));
+      if (this.props.eventDetail.bookmarked) {
+        this.props.deleteBookmark(this.props.eventDetail.id);
       } else {
-        const bookmark = {
-          event_id: this.state.event_id,
-          user_id: this.props.currentUser.id
-        };
-        this.props.createBookmark(bookmark)
-          .then(this.setState({ selected: true }));
+        const bookmark = { event_id: this.props.eventDetail.id };
+        this.props.createBookmark(bookmark);
       }
     }
   }

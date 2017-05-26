@@ -33,7 +33,7 @@ const App = () => (
 
     <Route exact path="/events/:eventId" component={EventDetailContainer} />
 
-    <ProtectedRoute path="/users/:id" component={UserContainer} />
+    <ProtectedRoute exact path="/users/:id" component={UserContainer} />
 
     <Route path="/" component={Footer} />
   </div>

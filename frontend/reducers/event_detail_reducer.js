@@ -11,7 +11,9 @@ const defaultEvent = {
   description: '',
   image: '',
   ticket_price: 0,
-  ticket_quantity: 0
+  ticket_quantity: 0,
+  bookmarked: [],
+  categories: []
 };
 
 const eventDetailReducer = (state = defaultEvent, action) => {

@@ -19,7 +19,6 @@ class Api::BookmarksController < ApplicationController
     current_user_id = current_user.id
     event_id = params[:id].to_i
     @bookmark = Bookmark.where("event_id = ? and user_id = ?", "#{event_id}", "#{current_user_id}").first
-    @bookmark = Bookmark.where("event_id = ? and user_id = ?", "#{event_id}", "#{current_user_id}").first
     @bookmark.destroy
     render "api/bookmarks/show"
   end

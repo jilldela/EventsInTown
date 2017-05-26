@@ -14,7 +14,7 @@ class EventIndexCarousel extends React.Component {
   }
 
   render() {
-    let { events, deleteEvent } = this.props;
+    let { events, deleteEvent, fetchSingleEvent } = this.props;
     events = events.slice(0,5);
 
     return (
@@ -29,6 +29,7 @@ class EventIndexCarousel extends React.Component {
             <EventIndexItem
               deleteEvent={deleteEvent}
               eventDetail={eventDetail}
+              fetchSingleEvent={fetchSingleEvent}
               key={`event-${eventDetail.id}`}
               />
           )}

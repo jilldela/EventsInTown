@@ -39,7 +39,7 @@ class TicketBar extends React.Component {
   render() {
     return (
       <div className="ticket-bar">
-        <BookmarkContainer />
+        <BookmarkContainer eventDetail={this.props.eventDetail} />
         <button className="ticket-button" onClick={this.modalType}>TICKETS</button>
 
         <Modal

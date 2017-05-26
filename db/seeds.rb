@@ -321,4 +321,4 @@ t2 = Ticket.create(event_id: e9.id, user_id: jill.id)
 t3 = Ticket.create(event_id: e14.id, user_id: jill.id)
 
 Bookmark.destroy_all
-b1 = Bookmark.create(event_id: e18, user_id: jill.id)
+b1 = Bookmark.create(event_id: e18.id, user_id: jill.id)

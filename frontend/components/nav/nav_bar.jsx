@@ -17,12 +17,14 @@ class NavBar extends React.Component {
   }
 
   handleLogIn() {
-    this.props.requestLogIn({username: 'Jill', password: 'password'});
+    this.props.requestLogIn({username: 'Jill', password: 'password'})
+      .then(user => this.props.history.push(`/users/${user.id}/events`));
   }
 
-  handleLogOut() {
-    this.props.requestLogOut()
-      .then(this.props.history.push(`/`));
+  handleLogOut(e) {
+    e.preventDefault();
+    this.props.requestLogOut();
+      // .then(this.props.history.push(`/`));
   }
 
   render() {

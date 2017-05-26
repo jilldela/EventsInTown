@@ -56,7 +56,7 @@ class EventDetail extends React.Component {
           </div>
         </header>
 
-        <TicketBarContainer />
+        <TicketBarContainer eventDetail={eventDetail}/>
 
         <div className="main-detail-container">
           <div className="event-description">
