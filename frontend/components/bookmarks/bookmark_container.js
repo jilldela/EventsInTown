@@ -8,7 +8,6 @@ import { createBookmark, deleteBookmark } from '../../actions/bookmark_actions';
 const mapStateToProps = ({ session, user }, ownProps) => ({
   currentUser: session.currentUser,
   loggedIn: Boolean(session.currentUser),
-  user: ( user || { bookmarks: [] }),
   eventDetail: ownProps.eventDetail
 });
 

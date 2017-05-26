@@ -9,3 +9,5 @@ else
   bookmarked = false
 end
 json.set! :bookmarked, bookmarked
+
+json.current_user_id current_user.id
