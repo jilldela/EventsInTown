@@ -59,8 +59,13 @@
 .nav-logo:hover, .session-links ul li:hover,
 .session-button:hover {
   cursor: pointer;
-  text-decoration: underline;
+  font-weight: bolder;
   transition: 0.5s;
+}
+
+.session-links ul li:hover,
+.session-button:hover {
+  font-size: 18.5px;
 }
 
 a:link, a:hover, a:visited {
