@@ -113,7 +113,7 @@
   justify-content: space-around;
 }
 
-.event-index-link {
+.event-index-link:link, .event-index-link:visited {
   font-family: 'Raleway', sans-serif;
   font-size: 24px;
   padding: 5px 20px;
